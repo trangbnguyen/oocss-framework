@@ -1,0 +1,90 @@
+/*
+Checkboxes
+
+This mixin will create the class as well as the css parameters.
+Change the variable sin the skin sass file located in the "skins" folder.
+If the style is not needed, type "null" after the variable. The compiler will ignore the style.
+
+Class Output: .checkbox--$checkbox-modifier
+
+Example: .checkbox--primary
+
+Variables Options
+
+$checkbox-off-color: defines the color when the switch is off
+
+$checkbox-on-color: defines the color when the switch is on
+
+$checkbox-height: in pixels
+
+$checkbox-width: in pixels
+
+
+markup:
+<body ng-app="">
+    <div class="{{ChangeTheme}}">
+        <select ng-model="ChangeTheme" class="dropdown--primary">
+            <option value="bofi-bankofinternet--blue">Bank Of Internet</option>
+            <option value="bofi-bankx--green">BankX</option>
+            <option value="bofi-netbank--navy">Netbank</option>
+            <option value="bofi-ufb--brown">UfbDirect</option>
+        </select>
+    </div>
+    <div ng-class="ChangeTheme">
+        <div class="bofi-col-50--lg">
+            <input class="checkbox"
+                   type="checkbox"
+                   id="primaryCheckBox"
+                   name="primaryCheckBox"
+                   checked>
+            <label for="primaryCheckBox"></label>
+        </div>
+    </div>
+</body>
+
+Styleguide 2.3
+*/
+
+@mixin create-checkbox (
+	$checkbox-modifier,
+	$checkbox-off-color,
+	$checkbox-on-color,
+	$checkbox-border-color,
+	$checkbox-height) {
+
+	@if ($checkbox-modifier != null) {
+		$checkbox-modifier: "--" + $checkbox-modifier;
+	}
+
+	input[type=checkbox].checkbox#{$checkbox-modifier} {
+		display: none;
+	}
+	input[type=checkbox].checkbox#{$checkbox-modifier} + label {
+		position: relative;
+        top: 4px;
+	}
+	input[type=checkbox].checkbox + label::before {
+		background: $checkbox-off-color;
+		border: 1px solid $checkbox-border-color;
+		border-radius: 3px;
+		content: " ";
+		display: inline-block;
+		height: $checkbox-height;
+		width: $checkbox-height;
+	}
+	
+	input[type=checkbox]:checked.checkbox + label::before {
+		background: $checkbox-on-color;
+	}
+	input[type=checkbox]:checked.checkbox + label::after {
+		background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAAAjklEQVRYhe3Tuw2AIBSFYTpLx/G5mB1ruYHj+Bjg2BCDgBX3GDH39Hx/AsEYnU6ne3cYMXH5A4Dl8iAlPJ4RKJwflP8vv3+VR40ZDZNfAKzPiTy+wuKObulE9t3DXscTCfQCT3tLtOL8c0KMjxKdOB8nxPkgsZN+rZdg8ImENB8kGLyXYPEuweR1Ol0BOwHTgJwTt8rAawAAAABJRU5ErkJggg==') center center no-repeat;
+		background-size: cover;
+		content: "";
+		display: inline-block;
+		height: $checkbox-height - 2;
+		left: 1px;
+		position: absolute;
+		top: 1px;
+		width: $checkbox-height - 2;
+	}
+}

@@ -1,0 +1,35 @@
+/*
+Profile Image
+
+This mixin defines and dynamically creates the profile image class. 
+Define the variables in the "config" folder. 
+The mixin never needs to be changed or edited. 
+If a style is not needed, type "null" after the variable and the compiler will ignore the style.
+
+Variables Options
+
+$profile-image-width: image width i.e 100px
+
+$profile-image-height: image height i.e 100px
+
+$profile-position: same as css display attribute i.e inline, inline-block etc
+
+Styleguide 2.10
+*/
+@mixin create-profile-image ( 
+$profile-image-width, 
+$profile-image-height, 
+$profile-position ) {
+    .profile-image {
+        width: $profile-image-width;
+        height: $profile-image-height;
+        display: $profile-position;
+        vertical-align: middle;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+    }
+}

@@ -1,0 +1,76 @@
+﻿/*
+Pallettes
+
+This section describes the different skin color pallettes. 
+
+Styleguide 1.0
+*/
+
+/*
+Main Color Variables
+
+$white - plain white
+$black - plain black
+$primary-color - main accent color
+$secondary-color - main accent color
+$tertiary-color - main accent color
+$support-color-1 - main accent color
+$support-color-2 - main accent color
+$support-color-3 - main accent color
+$support-color-4 - main accent color
+
+markup:
+<div style="background: {$modifiers};" class="styleguide-color">{$modifiers}</div>
+
+Styleguide 1.1
+*/
+$white: #ffffff;
+$black: #000000;
+
+$primary-color: $blue;
+$secondary-color: $green;
+$tertiary-color: $orange;
+
+$support-color-1: $dark-grey;
+$support-color-2: $medium-grey;
+$support-color-3: $light-grey;
+$support-color-4: $very-light-grey;
+
+$error-color: $red;
+$success-color: $success-green;
+/*
+Main Colors 
+
+$very-light-grey - Used in hover states, or whenever subtle backgrounds are needed
+$light-grey - Used in horizontal rules and sparingly in other places
+$medium-grey - Headline lighter version
+$dark-grey - Primary text color and used as base for gradient on some buttons
+$red - Used in alerts or errors
+$success-green - Used for success messages
+
+markup:
+<div style="background: {$modifiers};" class="styleguide-color">{$modifiers}</div>
+
+Styleguide 1.2
+*/
+$very-light-grey: #F9F9F9;
+$light-grey: #DEDFE1;
+$medium-grey: #9B9B9B;
+$dark-grey: #364754;
+$red: #E35235;
+$success-green: #8eb870;
+/*
+Blue Skin
+
+$blue - Primary accent color
+$green - Secondary accent color
+$orange - Tertiary accent color
+
+markup:
+<div style="background: {$modifiers};" class="styleguide-color">{$modifiers}</div>
+
+Styleguide 1.3
+*/
+$blue: #4D98D6;
+$green: #8eb870;
+$orange: #EF965D;

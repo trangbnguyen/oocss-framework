@@ -1,0 +1,106 @@
+/*
+Buttons
+
+This mixin will create the class as well as the css parameters.
+Change the variable sin the skin sass file located in the "skins" folder.
+If the style is not needed, type "null" after the variable. The compiler will ignore the style.
+
+Class Output: .btn--$button-modifier
+
+Example: .btn--primary
+
+Variables Options
+
+$button-type: defines class name type i.e main
+
+$button-color: background color i.e #4286f4
+
+$button-border-radius: same as css attributes i.e 4px
+
+$button-border: same as css attributes i.e 1px solid $grey
+
+$button-padding: same as css attributes i.e 4px
+
+$button-font-size: same as css attributes i.e 14px
+
+$button-font-color: font color i.e #4286f4
+
+$button-width: in pixels
+
+$button-gradient-start-color: hex use the same hex for start and end if one color
+
+$button-gradient-end-color: hex use the same hex for start and end if one color
+
+$button-gradient-orientation: vertical, horizontal
+
+$button-text-transform: 
+
+$disabled-color: disabled background color i.e hex
+
+markup:
+    <body ng-app="">
+    <div class="{{ChangeTheme}}">
+    <select ng-model="ChangeTheme" class="dropdown--primary"> 
+        <option value="bofi-bankofinternet--blue">Bank Of Internet</option>
+        <option value="bofi-bankx--green">BankX</option>
+        <option value="bofi-netbank--navy">Netbank</option>
+        <option value="bofi-ufb--brown">UfbDirect</option>
+    </select>
+    </div>
+    <div ng-class="ChangeTheme">
+        <div class="flex-column--center">
+    <button class="btn--primary-lg">Primary Large</button>
+    <br>
+    <button class="btn--primary-sm">Primary Small</button>
+    <br>
+    <button class="btn--secondary-lg">Secondary Large</button>
+    <br>
+    <button class="btn--secondary-sm">Secondary Small</button>
+    <br>
+    <button class="btn--alternative-lg">Alternative Large</button>
+    <br>
+    <button class="btn--alternative-sm">Alternative Small</button>
+        </div>
+    </div>
+</body>
+    <br>
+    <br>
+<iframe height='603' scrolling='no' title='Button - Bofi' src='//codepen.io/Trangbnguyen/embed/8ae32824530120aca071c4a336be6fa6/?height=603&theme-id=light&default-tab=css,result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'></iframe>
+
+Styleguide 2.2
+*/
+
+@mixin create-btn (
+$button-modifier,
+$button-border-radius,
+$button-border,
+$button-padding,
+$button-font-size,
+$button-font-color,
+$button-width,
+$button-gradient-start-color,
+$button-gradient-end-color,
+$button-gradient-orientation,
+$button-opacity-hover,
+$button-text-transform,
+$button-icon-color) {
+    .btn--#{$button-modifier}{
+        @include gradient($button-gradient-start-color, $button-gradient-end-color, $button-gradient-orientation);
+        border-radius: $button-border-radius;
+        border: $button-border;
+        padding: $button-padding;
+        color: $button-font-color;
+        font-size: $button-font-size;
+        min-width: $button-width;
+        text-transform: $button-text-transform;
+        &:hover {
+        opacity: $button-opacity-hover;
+        }
+                i{
+            color: $button-icon-color;
+            margin-left: 10px;
+        }
+        }
+
+        
+    }

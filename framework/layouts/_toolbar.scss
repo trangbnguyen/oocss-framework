@@ -1,0 +1,8 @@
+@mixin create-toolbar ($toolbar-background,$toolbar-padding) {
+    .toolbar {
+        background-color: $toolbar-background;
+        padding: $toolbar-padding;
+    }
+    
+}
+

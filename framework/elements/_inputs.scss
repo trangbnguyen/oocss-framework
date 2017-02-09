@@ -1,0 +1,138 @@
+/*
+Inputs
+
+This mixin will create the class as well as the css parameters.
+Change the variable sin the skin sass file located in the "skins" folder.
+If the style is not needed, type "null" after the variable. The compiler will ignore the style.
+
+Class Output: .input--$input-modifier
+
+Example: .input--primary
+
+Variables Options
+
+$input-type: defines class name type i.e main
+
+$input-background: background-color i.e hex
+
+$input-border: same as css border attributes i.e 1px solid $green
+
+$input-font-color: font color i.e hex
+
+$input-padding: same as css padding attributes i.e 4px
+
+$input-border-radius: same as css border radius attributes i.e 5px
+
+$input-focus-border:
+
+$icon-position-top:
+
+$icon-position-bottom:
+
+markup:
+<body ng-app="">
+    <div class="{{ChangeTheme}}">
+        <select ng-model="ChangeTheme" class="dropdown--primary">
+            <option value="bofi-bankofinternet--blue">Bank Of Internet</option>
+            <option value="bofi-bankx--green">BankX</option>
+            <option value="bofi-netbank--navy">Netbank</option>
+            <option value="bofi-ufb--brown">UfbDirect</option>
+        </select>
+    </div>
+    <div ng-class="ChangeTheme">
+        <div class="flex-column--center bofi-col-50--lg">
+    <div class="input--primary">
+        <input type="text" placeholder="primary input">
+    </div>
+       <div class="input--secondary">
+        <input type="text" placeholder="secondary input">
+    </div>
+    </div>
+</div>
+    <br>
+    </div>
+</body>
+
+sg-wrapper:
+<style>
+    .input--primary,input--secondary {
+    margin: 10px;
+    }
+</style>
+<sg-wrapper-content/>
+
+Styleguide 2.6
+*/
+@mixin create-input( $input-modifier, $input-background, $input-border, $input-specific-border, $input-font-color, $input-padding, $input-border-radius, $input-focus-border, $input-error-border, $input-font-size, $icon-position-top, $icon-position-bottom, $icon-color, $input-letter-spacing ) {
+    .input--#{$input-modifier} {
+        position: relative;
+
+        input {
+            background-color: $input-background;
+
+            @if $input-specific-border != null {
+                border:0;
+                border-#{$input-specific-border}: $input-border;
+
+                &:focus,&:hover  {
+                    border:0;
+                    border-#{$input-specific-border}: $input-focus-border;
+                }
+ 
+            }
+            @else {
+                border: $input-border;
+
+                &:focus, &:hover {
+                    border: $input-focus-border;
+                }
+            }
+        
+
+        color: $input-font-color;
+        padding: $input-padding;
+        border-radius: $input-border-radius;
+        font-size: $input-font-size;
+        outline: none;
+        width: 100%;
+        box-sizing: border-box;
+        letter-spacing: $input-letter-spacing;
+
+        &:-webkit-autofill {
+            -webkit-box-shadow: 0 0 0px 1000px white inset;
+        }
+    }
+
+    &.error {
+        input {
+            border: $input-error-border;
+        }
+    }
+
+    @if $input-modifier == "icon" {
+        i {
+            position: absolute;
+            top: $icon-position-top;
+            left: $icon-position-bottom;
+            color: $icon-color;
+        }
+    }
+
+    @if $input-modifier == "amount" {
+        input {
+            text-align: right;
+        }
+
+        i {
+            position: absolute;
+            top: $icon-position-top;
+            left: $icon-position-bottom;
+            color: $icon-color;
+
+            &::before {
+                font-size: 24px;
+            }
+        }
+    }
+    }
+}

@@ -1,0 +1,9 @@
+﻿//
+//Dependencies
+//
+@import "./framework/framework";
+//
+//Theme
+//
+@import "./config/theme-options/themes/theme-config";
+@include create-theme ($navy-skin, $netbank-brand);

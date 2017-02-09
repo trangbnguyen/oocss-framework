@@ -1,0 +1,2631 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/*
+Global Font Styles
+
+This mixin defines the global font styles. 
+Define the variables in the "config" folder. 
+The mixin never needs to be changed or edited. 
+If a style is not needed, type "null" after the variable and the compiler will ignore the style.
+
+Variables Options
+
+$global-font-color: hex i.e #4286f4
+
+$global-font-family: font family i.e "Times New Roman", Georgia, Serif;
+
+$global-font-weight: same as CSS attributes i.e 300, bolder
+
+Styleguide 4.1
+*/
+/*
+Global Headers
+
+This mixin defines the global header styles. 
+Define the variables in the "config" folder. 
+The mixin never needs to be changed or edited. 
+If a style is not needed, type "null" after the variable and the compiler will ignore the style.
+
+Variables Options
+
+$h1: defines h1 tags
+
+$h2: defines h2 tags
+
+$h3: defines h3 tags
+
+$h4: defines h4 tags
+
+$h5: defines h5 tags
+
+markup:
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+
+Styleguide 4.2
+*/
+/*
+Custom Text Styles
+
+This mixin defines and dynamically creates the class for custom text styles. 
+Define the variables in the "config" folder. 
+The mixin never needs to be changed or edited. 
+If a style is not needed, type "null" after the variable and the compiler will ignore the style.
+
+Class Output: .text--$text-type
+
+Example: .text--capitalize
+
+Variables Options
+
+$text-type: defines class name i.e capitalize
+
+$text-size: font-size i.e 16px
+
+$text-color: text color i.e  #4286f4
+
+$text-decoration: same as css text decoration attributes i.e underline
+
+$text-transform: same as css text-transform attributes i.e uppercase, capitalize
+
+$text-weight: font weight i.e bold
+
+$text-hover:
+
+markup:
+<p class="text--capitalize">capitalize headline</p>
+<p class="text--light">light headline</p>
+<a href="#" class="text--link">Link Text</a>
+<p class="text--content">Body Content Example. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+<p class="text--small">Small Text Example. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+Styleguide 4.3
+*/
+/*
+Grid
+    
+Styleguide 6.1
+*/
+[class^="bofi-col"] {
+  padding-right: 10px; }
+  [class^="bofi-col"]:last-child {
+    padding-right: 0; }
+
+.bofi-col-100--sm {
+  width: 100%;
+  display: inline-block;
+  clear: both; }
+
+.bofi-col-50--sm {
+  width: 50%;
+  float: left;
+  box-sizing: border-box; }
+
+.bofi-col-33--sm {
+  width: 33.33333%;
+  float: left;
+  box-sizing: border-box; }
+
+.bofi-col-66--sm {
+  width: 66.66667%;
+  float: left;
+  box-sizing: border-box; }
+
+.bofi-col-25--sm {
+  width: 25%;
+  float: left;
+  box-sizing: border-box; }
+
+.bofi-col-75--sm {
+  width: 75%;
+  float: left;
+  box-sizing: border-box; }
+
+.bofi-col-20--sm {
+  width: 20%;
+  float: left;
+  box-sizing: border-box; }
+
+.bofi-col-40--sm {
+  width: 40%;
+  float: left;
+  box-sizing: border-box; }
+
+.bofi-col-60--sm {
+  width: 60%;
+  float: left;
+  box-sizing: border-box; }
+
+.bofi-col-80--sm {
+  width: 80%;
+  float: left;
+  box-sizing: border-box; }
+
+[class^="bofi-col"] {
+  padding-right: 10px; }
+  [class^="bofi-col"]:last-child {
+    padding-right: 0; }
+
+.bofi-col-100--md {
+  width: 100%;
+  display: inline-block;
+  clear: both; }
+
+.bofi-col-50--md {
+  width: 50%;
+  float: left;
+  box-sizing: border-box; }
+
+.bofi-col-33--md {
+  width: 33.33333%;
+  float: left;
+  box-sizing: border-box; }
+
+.bofi-col-66--md {
+  width: 66.66667%;
+  float: left;
+  box-sizing: border-box; }
+
+.bofi-col-25--md {
+  width: 25%;
+  float: left;
+  box-sizing: border-box; }
+
+.bofi-col-75--md {
+  width: 75%;
+  float: left;
+  box-sizing: border-box; }
+
+.bofi-col-20--md {
+  width: 20%;
+  float: left;
+  box-sizing: border-box; }
+
+.bofi-col-40--md {
+  width: 40%;
+  float: left;
+  box-sizing: border-box; }
+
+.bofi-col-60--md {
+  width: 60%;
+  float: left;
+  box-sizing: border-box; }
+
+.bofi-col-80--md {
+  width: 80%;
+  float: left;
+  box-sizing: border-box; }
+
+[class^="bofi-col"] {
+  padding-right: 10px; }
+  [class^="bofi-col"]:last-child {
+    padding-right: 0; }
+
+.bofi-col-100--lg {
+  width: 100%;
+  display: inline-block;
+  clear: both; }
+
+.bofi-col-50--lg {
+  width: 50%;
+  float: left;
+  box-sizing: border-box; }
+
+.bofi-col-33--lg {
+  width: 33.33333%;
+  float: left;
+  box-sizing: border-box; }
+
+.bofi-col-66--lg {
+  width: 66.66667%;
+  float: left;
+  box-sizing: border-box; }
+
+.bofi-col-25--lg {
+  width: 25%;
+  float: left;
+  box-sizing: border-box; }
+
+.bofi-col-75--lg {
+  width: 75%;
+  float: left;
+  box-sizing: border-box; }
+
+.bofi-col-20--lg {
+  width: 20%;
+  float: left;
+  box-sizing: border-box; }
+
+.bofi-col-40--lg {
+  width: 40%;
+  float: left;
+  box-sizing: border-box; }
+
+.bofi-col-60--lg {
+  width: 60%;
+  float: left;
+  box-sizing: border-box; }
+
+.bofi-col-80--lg {
+  width: 80%;
+  float: left;
+  box-sizing: border-box; }
+
+[class^="bofi-col"] {
+  padding-right: 10px; }
+  [class^="bofi-col"]:last-child {
+    padding-right: 0; }
+
+.bofi-col-100--xlg {
+  width: 100%;
+  display: inline-block;
+  clear: both; }
+
+.bofi-col-50--xlg {
+  width: 50%;
+  float: left;
+  box-sizing: border-box; }
+
+.bofi-col-33--xlg {
+  width: 33.33333%;
+  float: left;
+  box-sizing: border-box; }
+
+.bofi-col-66--xlg {
+  width: 66.66667%;
+  float: left;
+  box-sizing: border-box; }
+
+.bofi-col-25--xlg {
+  width: 25%;
+  float: left;
+  box-sizing: border-box; }
+
+.bofi-col-75--xlg {
+  width: 75%;
+  float: left;
+  box-sizing: border-box; }
+
+.bofi-col-20--xlg {
+  width: 20%;
+  float: left;
+  box-sizing: border-box; }
+
+.bofi-col-40--xlg {
+  width: 40%;
+  float: left;
+  box-sizing: border-box; }
+
+.bofi-col-60--xlg {
+  width: 60%;
+  float: left;
+  box-sizing: border-box; }
+
+.bofi-col-80--xlg {
+  width: 80%;
+  float: left;
+  box-sizing: border-box; }
+
+.right {
+  float: right; }
+
+@media screen and (max-width: 1439px) {
+  .container--center {
+    max-width: 100%; } }
+
+/*
+Flex Grid
+
+Flex grid can be combined with the traditional grid. You can use these classes a container or to position a single element. Read more here: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+Below are examples of all the flex classes available and how they affect the CSS objects.
+
+markup:
+<body ng-app="" class="bofi-bankofinternet--blue">
+    <div class="global">
+    <h3>Using Flex Row</h3>
+    <br>
+        <select ng-model="FlexRow" class="dropdown--primary">
+            <option value="flex-row--default">.flex-row--default</option>
+            <option value="flex-row--wrap">.flex-row--wrap</option>
+            <option value="flex-row--flex-end ">.flex-row--flex-end</option>
+            <option value="flex-row--center">.flex-row--center</option>
+            <option value="flex-row--space-around ">.flex-row--space-around </option>
+        </select>
+    </div>
+      <br>
+    <div ng-class="FlexRow" class="bofi-col-100--lg global example-col1">
+       <button class="btn--primary-lg bofi-col-33--lg">Button</button>
+       <button class="btn--secondary-lg bofi-col-33-lg">Button</button>
+        <button class="btn--alternative-lg bofi-col-33--lg">Button</button>
+    </div>
+     <br>
+     <div ng-class="FlexRow" class=" bofi-col-100--lg global">
+       <button class="btn--primary-lg bofi-col-50--lg">Button</button>
+       <button class="btn--secondary-lg bofi-col-33-lg">Button</button>
+        <button class="btn--alternative-lg bofi-col-33--lg">Button</button>
+    </div>
+      <br>
+     <div class="global">
+    <br>
+        <h3>Using Flex Column</h3>
+    <p>The first section has a set height in order to see the column.</p>
+    <br>
+        <select ng-model="FlexCol" class="dropdown--primary">
+            <option value="flex-column--default">.flex-column--default</option>
+            <option value="flex-column--wrap">.flex-column--wrap</option>
+            <option value="flex-column--flex-end ">.flex-column--flex-end </option>
+            <option value="flex-column--center">.flex-column--center</option>
+            <option value="flex-column--space-around ">.flex-column--space-around</option>
+        </select>
+    </div>
+      <br>
+    <div ng-class="FlexCol" class=" bofi-col-100--lg example-col">
+           <button class="btn--primary-lg bofi-col-25--lg">Button</button> 
+       <button class="btn--secondary-lg bofi-col-25--lg">Button</button> 
+        <button class="btn--alternative-lg bofi-col-60--lg">Button</button> 
+    <button class="btn--primary-lg bofi-col-25--lg">Button</button> 
+    </div>
+          <br>
+    <div ng-class="FlexCol" class=" bofi-col-100--lg">
+       <button class="btn--primary-lg bofi-col-25--lg">Button</button> 
+       <button class="btn--secondary-lg bofi-col-25--lg">Button</button> 
+        <button class="btn--alternative-lg bofi-col-25--lg">Button</button> 
+    <button class="btn--primary-lg bofi-col-25--lg">Button</button> 
+    </div>
+</body>
+
+sg-wrapper:
+<style>
+    .example-col {
+    height: 300px;
+    background-color: #DEDFE1;
+    padding:20px
+    }
+    .example-col1 {
+    background-color: #DEDFE1;
+    padding:20px
+    }
+</style>
+<sg-wrapper-content/>
+      
+Styleguide 6.2
+*/
+/**
+ * Generic mixin to create flex properties.
+ * Read: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+ * This mixin has strict variable options.
+ * $type: row | row-reverse | column | column-reverse
+ * $wrap: wrap | no-wrap
+ * $alignment:  justify-content (row x-axis) | align-items (column y-axis)
+ * $modifer: flex-start | flex-end | center | space-between | space-around
+ */
+.flex-row--default {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: default; }
+
+.flex-row--wrap {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: wrap; }
+
+.flex-row--flex-end {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end; }
+
+.flex-row--center {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.flex-row--space-around {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+
+.flex-column--default {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: default; }
+
+.flex-column--wrap {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: wrap; }
+
+.flex-column--flex-end {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-end; }
+
+.flex-column--center {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center; }
+
+.flex-column--space-around {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+
+.flex-start {
+  align-self: flex-start; }
+
+.flex-end {
+  align-self: flex-end; }
+
+.center {
+  align-self: center; }
+
+.baseline {
+  align-self: baseline; }
+
+.stretch {
+  align-self: stretch; }
+
+.center-align {
+  align-items: center;
+  justify-content: center;
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */ }
+
+/*
+Layouts
+
+Styleguide 5.1
+*/
+/*
+Toolbar
+
+Toolbar
+
+Class Output: .toolbar
+
+markup:
+            <div class="{{ChangeTheme}}">
+                <div class="global">
+                    <h2 class="sg" name="change-themes">Change Themes</h2>
+                    <select ng-model="ChangeTheme" class="dropdown--primary">
+                        <option value="bofi-bankofinternet--blue">Bank Of Internet</option>
+                        <option value="bofi-bankx--green">BankX</option>
+                        <option value="bofi-netbank--navy">Netbank</option>
+                        <option value="bofi-ufb--brown">UfbDirect</option>
+                    </select>
+                </div>
+            </div>
+ <div class="toolbar flex-row--default bofi-col-100--sm">
+                <span class="logo--sm-top bofi-col-20--sm center"></span>
+                <div class="flex-row--flex-end bofi-col-100--sm">
+                    <div class="icon--stacked center">
+                        <a>
+                            <i class="fa fa-envelope fa-invert"></i>
+                            <div class="icon-label">MESSAGES</div>
+                        </a>
+                    </div>
+                    <div class="icon--stacked center">
+                        <a>
+                            <i class="fa fa-bell fa-invert"></i>
+                            <div class="icon-label">ALERTS</div>
+                        </a>
+                    </div>
+                    <div class="icon--stacked center">
+                        <a>
+                            <i class="fa fa-life-ring fa-invert"></i>
+                            <div class="icon-label">SUPPORT</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+Styleguide 3.2.2
+*/
+/*
+Buttons
+
+This mixin will create the class as well as the css parameters.
+Change the variable sin the skin sass file located in the "skins" folder.
+If the style is not needed, type "null" after the variable. The compiler will ignore the style.
+
+Class Output: .btn--$button-modifier
+
+Example: .btn--primary
+
+Variables Options
+
+$button-type: defines class name type i.e main
+
+$button-color: background color i.e #4286f4
+
+$button-border-radius: same as css attributes i.e 4px
+
+$button-border: same as css attributes i.e 1px solid $grey
+
+$button-padding: same as css attributes i.e 4px
+
+$button-font-size: same as css attributes i.e 14px
+
+$button-font-color: font color i.e #4286f4
+
+$button-width: in pixels
+
+$button-gradient-start-color: hex use the same hex for start and end if one color
+
+$button-gradient-end-color: hex use the same hex for start and end if one color
+
+$button-gradient-orientation: vertical, horizontal
+
+$button-text-transform: 
+
+$disabled-color: disabled background color i.e hex
+
+markup:
+    <body ng-app="">
+    <div class="{{ChangeTheme}}">
+    <select ng-model="ChangeTheme" class="dropdown--primary"> 
+        <option value="bofi-bankofinternet--blue">Bank Of Internet</option>
+        <option value="bofi-bankx--green">BankX</option>
+        <option value="bofi-netbank--navy">Netbank</option>
+        <option value="bofi-ufb--brown">UfbDirect</option>
+    </select>
+    </div>
+    <div ng-class="ChangeTheme">
+        <div class="flex-column--center">
+    <button class="btn--primary-lg">Primary Large</button>
+    <br>
+    <button class="btn--primary-sm">Primary Small</button>
+    <br>
+    <button class="btn--secondary-lg">Secondary Large</button>
+    <br>
+    <button class="btn--secondary-sm">Secondary Small</button>
+    <br>
+    <button class="btn--alternative-lg">Alternative Large</button>
+    <br>
+    <button class="btn--alternative-sm">Alternative Small</button>
+        </div>
+    </div>
+</body>
+    <br>
+    <br>
+<iframe height='603' scrolling='no' title='Button - Bofi' src='//codepen.io/Trangbnguyen/embed/8ae32824530120aca071c4a336be6fa6/?height=603&theme-id=light&default-tab=css,result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'></iframe>
+
+Styleguide 2.2
+*/
+/*
+Icons
+
+Class Output: 
+
+Example: 
+
+Variables Options
+
+Styleguide 2.5
+*/
+/*
+Inputs
+
+This mixin will create the class as well as the css parameters.
+Change the variable sin the skin sass file located in the "skins" folder.
+If the style is not needed, type "null" after the variable. The compiler will ignore the style.
+
+Class Output: .input--$input-modifier
+
+Example: .input--primary
+
+Variables Options
+
+$input-type: defines class name type i.e main
+
+$input-background: background-color i.e hex
+
+$input-border: same as css border attributes i.e 1px solid $green
+
+$input-font-color: font color i.e hex
+
+$input-padding: same as css padding attributes i.e 4px
+
+$input-border-radius: same as css border radius attributes i.e 5px
+
+$input-focus-border:
+
+$icon-position-top:
+
+$icon-position-bottom:
+
+markup:
+<body ng-app="">
+    <div class="{{ChangeTheme}}">
+        <select ng-model="ChangeTheme" class="dropdown--primary">
+            <option value="bofi-bankofinternet--blue">Bank Of Internet</option>
+            <option value="bofi-bankx--green">BankX</option>
+            <option value="bofi-netbank--navy">Netbank</option>
+            <option value="bofi-ufb--brown">UfbDirect</option>
+        </select>
+    </div>
+    <div ng-class="ChangeTheme">
+        <div class="flex-column--center bofi-col-50--lg">
+    <div class="input--primary">
+        <input type="text" placeholder="primary input">
+    </div>
+       <div class="input--secondary">
+        <input type="text" placeholder="secondary input">
+    </div>
+    </div>
+</div>
+    <br>
+    </div>
+</body>
+
+sg-wrapper:
+<style>
+    .input--primary,input--secondary {
+    margin: 10px;
+    }
+</style>
+<sg-wrapper-content/>
+
+Styleguide 2.6
+*/
+/*
+Labels
+
+This mixin will create the class as well as the css parameters.
+Change the variable sin the skin sass file located in the "skins" folder.
+If the style is not needed, type "null" after the variable. The compiler will ignore the style.
+
+Class Output: .label--$label-modifier
+
+Example: .label--primary
+
+Variables Options
+
+$label-type: defines class name type i.e form
+
+$label-font-size: same as css attributes i.e 14px
+
+$label-font-color: font color i.e #4286f4
+
+$label-padding: same as css padding attributes i.e 4px
+
+$text-transform: same as css text transform attributes i.e capitalize, uppercase
+
+markup:
+<div class="bofi-netbank--navy">
+    <div class="global flex-column--center bofi-column-50--lg">
+<br>
+<p>Note: The wrapper classes are not needed. The wrapper classes are simply to show themes.</p>
+ <br>
+        <label class="label--primary">Primary</label>
+    </div>
+</div>
+
+sg-wrapper:
+<style>
+</style>
+<sg-wrapper-content/>
+
+Styleguide 2.7
+*/
+/*
+Logo
+
+This mixin defines and dynamically creates the logo classes. 
+Define the variables in the "config" folder. 
+The mixin never needs to be changed or edited. 
+If a style is not needed, type "null" after the variable and the compiler will ignore the style.
+
+Class Output: .logo--$logo-modifer
+
+Example: .logo--stacked
+
+Variables Options
+
+$logo-modifer: defines the logo class i.e stacked
+
+$logo: logo image same as css background-image attributes i.e url("paper.gif");
+
+$logo-height: height i.e 150px
+
+$logo-width: width i.e 150px
+
+$logo-margin: same as css margin attributes
+
+Styleguide 2.9
+*/
+/*
+List Styles
+
+This mixin will create the class as well as the css parameters.
+Change the variable sin the skin sass file located in the "skins" folder.
+If the style is not needed, type "null" after the variable. The compiler will ignore the style.
+
+Class Output: .list--$list-modifier
+
+Example: .list--bullets
+
+Variables Options
+
+$list-modifier:
+
+$list-style-type:
+
+$list-font-color:
+
+$list-font-size:
+
+$list-line-height:
+
+markup:
+<div class="bofi-bankofinternet--blue">
+    <div class="global flex-column--center">
+    <div class="list--bullets">
+    <ul>
+        <li>List Item</li>
+        <li>List Item</li>
+        <li>List Item</li>
+    </ul>
+</div>
+<div class="list--numbered">
+    <ul>
+        <li>List Item</li>
+        <li>List Item</li>
+        <li>List Item</li>
+    </ul>
+    </div>
+</div>
+</div>
+
+Styleguide 2.8
+*/
+/*
+Profile Image
+
+This mixin defines and dynamically creates the profile image class. 
+Define the variables in the "config" folder. 
+The mixin never needs to be changed or edited. 
+If a style is not needed, type "null" after the variable and the compiler will ignore the style.
+
+Variables Options
+
+$profile-image-width: image width i.e 100px
+
+$profile-image-height: image height i.e 100px
+
+$profile-position: same as css display attribute i.e inline, inline-block etc
+
+Styleguide 2.10
+*/
+/*
+User Initials
+
+This mixin defines and dynamically creates the profile image class. 
+Define the variables in the "config" folder. 
+The mixin never needs to be changed or edited. 
+If a style is not needed, type "null" after the variable and the compiler will ignore the style.
+
+Class Output: .user-inititals
+
+Variables Options
+
+$user-initals-font-weight: same as css font weight attribute i.e bold
+
+$user-initals-font-size: font size i.e 12px
+
+$user-initals-background: background color i.e hex or color variable
+
+markup:
+<h1>Example</h1>
+<sg-insert>3.6.3</sg-insert>
+
+sg-wrapper:
+<div class="bofi-udb--blue" style="height: 250px;">
+    <style>
+    .fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+    .fa-caret-down:before {
+  content: "\f0d7";
+}
+    </style>
+   <sg-wrapper-content/>
+</div>
+
+Styleguide 2.13
+*/
+/*
+Switches
+
+This mixin defines and dynamically creates the switch classes. 
+Define the variables in the "config" folder. 
+The mixin never needs to be changed or edited. 
+If a style is not needed, type "null" after the variable and the compiler will ignore the style.
+
+Class Output: .switch--$switch-modifier
+
+Example: .switch--primary
+
+Variables Options
+
+$switch-off-color: defines the color when the switch is off
+
+$switch-on-color: defines the color when the switch is on
+
+$switch-height: in pixels
+
+$switch-width: in pixels
+
+
+markup:
+    <body ng-app="">
+    <div class="{{ChangeTheme}}">
+    <select ng-model="ChangeTheme" class="dropdown--primary"> 
+        <option value="bofi-bankofinternet--blue">Bank Of Internet</option>
+        <option value="bofi-bankx--green">BankX</option>
+        <option value="bofi-netbank--navy">Netbank</option>
+        <option value="bofi-ufb--brown">UfbDirect</option>
+    </select>
+    </div>
+    <div ng-class="ChangeTheme">
+        <div class="flex-column--center">
+            <input type="checkbox" class="switch" id="test" />
+            <label for="test">Testing the switch</label>
+        </div>
+    </div>
+</body>
+
+Styleguide 2.12
+*/
+/*
+Checkboxes
+
+This mixin will create the class as well as the css parameters.
+Change the variable sin the skin sass file located in the "skins" folder.
+If the style is not needed, type "null" after the variable. The compiler will ignore the style.
+
+Class Output: .checkbox--$checkbox-modifier
+
+Example: .checkbox--primary
+
+Variables Options
+
+$checkbox-off-color: defines the color when the switch is off
+
+$checkbox-on-color: defines the color when the switch is on
+
+$checkbox-height: in pixels
+
+$checkbox-width: in pixels
+
+
+markup:
+<body ng-app="">
+    <div class="{{ChangeTheme}}">
+        <select ng-model="ChangeTheme" class="dropdown--primary">
+            <option value="bofi-bankofinternet--blue">Bank Of Internet</option>
+            <option value="bofi-bankx--green">BankX</option>
+            <option value="bofi-netbank--navy">Netbank</option>
+            <option value="bofi-ufb--brown">UfbDirect</option>
+        </select>
+    </div>
+    <div ng-class="ChangeTheme">
+        <div class="bofi-col-50--lg">
+            <input class="checkbox"
+                   type="checkbox"
+                   id="primaryCheckBox"
+                   name="primaryCheckBox"
+                   checked>
+            <label for="primaryCheckBox"></label>
+        </div>
+    </div>
+</body>
+
+Styleguide 2.3
+*/
+/*
+Radio Buttons
+
+This mixin defines and dynamically creates the radiobutton classes. 
+Define the variables in the "config" folder. 
+The mixin never needs to be changed or edited. 
+If a style is not needed, type "null" after the variable and the compiler will ignore the style.
+
+Class Output: .radio-button--$radio-button-modifier
+
+Example: .radio-button--primary
+
+Variables Options
+
+$radio-button-off-color: defines the color when the radio button is not selected
+
+$radio-button-on-color: defines the color when the radio button is selected
+
+$radio-button-height: in pixels
+
+
+markup:
+
+Styleguide 2.11
+*/
+/*
+Alerts
+
+This mixin defines and dynamically creates the button classes. 
+Change the variable in the skin sass file located in config "skins"
+If style is not needed, type "null" after the variable and the compiler will ignore the style.
+
+Class Output: .alert--$alert-modifier
+
+Example: .alert--primary
+
+Variables Options
+
+$alert-background-color: defines the color of the alert box
+
+$alert-font-color: defines the color of the font
+
+$alert-height: in pixels
+
+$alert-width: in pixels
+
+markup:
+
+Styleguide 2.1
+*/
+/*
+Dialog Boxes
+
+This mixin will create the class as well as the css parameters.
+Change the variable sin the skin sass file located in the "skins" folder.
+If the style is not needed, type "null" after the variable. The compiler will ignore the style.
+
+Class Output: .dialog-box--$dialog-box-modifier
+
+Example: .dialog-box--primary
+
+Variables Options
+
+$dialog-box-background-color: defines the color of the alert box
+
+$dialog-box-font-color: defines the color of the font
+
+$dialog-box-height: in pixels
+
+$dialog-box-width: in pixels
+
+
+markup:
+
+*/
+/*
+Dropdowns
+
+This mixin will create the class as well as the css parameters.
+Change the variable sin the skin sass file located in the "skins" folder.
+If the style is not needed, type "null" after the variable. The compiler will ignore the style.
+    
+markup:
+<div class="bofi-netbank--navy">
+    <br>
+<p>Note: The wrapper classes are not needed. The wrapper classes are simply to show themes.</p>
+    <br>
+    <div class="global flex-column--center">
+        <select class="dropdown--primary">
+              <option value="Option1">Option 1</option>
+              <option value="Option2">Option 2</option>
+              <option value="Option3">Option 3</option>
+              <option value="Option4">Option 4</option>
+        </select>
+    </div>
+</div>
+
+Styleguide 2.4
+*/
+/*
+Navigation
+
+This mixin defines and dynamically creates the different navigation classes. 
+Define the variables in the "config" folder. 
+The mixin never needs to be changed or edited. 
+If a style is not needed, type "null" after the variable and the compiler will ignore the style.
+
+Class Output: .nav--$nav-modifer
+
+Example: .nav-primary
+
+Variables Options
+
+$nav-type:
+     
+$nav-background:
+
+$nav-padding:
+     
+$nav-link-color:
+     
+$nav-link-hover:
+     
+$nav-height:
+     
+$nav-margin:
+
+$nav-font-size:
+     
+$nav-text-underline:
+
+$nav-hover-font-weight:
+
+$nav-hover-border:
+     
+$nav-container:
+
+markup:
+            <div class="{{ChangeTheme}}">
+                <div class="global">
+                    <h2 class="sg" name="change-themes">Change Themes</h2>
+                    <select ng-model="ChangeTheme" class="dropdown--primary">
+                        <option value="bofi-bankofinternet--blue">Bank Of Internet</option>
+                        <option value="bofi-bankx--green">BankX</option>
+                        <option value="bofi-netbank--navy">Netbank</option>
+                        <option value="bofi-ufb--brown">UfbDirect</option>
+                    </select>
+                </div>
+            </div>
+            <div ng-class="ChangeTheme">
+    <div class="global">
+                <nav role="navigation" class="nav--primary">
+                    <ul class="bofi-col-100--sm flex-row--space-around">
+                        <li>
+                            <a class="center-align">Link</a>
+                        </li>
+                        <li>
+                            <a class="center-align">
+                                Link
+                            </a>
+                        </li>
+                        <li>
+                            <a class="center-align">
+                                Link
+                            </a>
+                        </li>
+                        <li>
+                            <a class="center-align">
+                                Link
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+     </div>
+    </div>
+
+Styleguide 3.2
+*/
+/*
+Progress Bars
+
+This mixin defines and dynamically creates the different progress bar classes. 
+Define the variables in the "config" folder. 
+The mixin never needs to be changed or edited. 
+If a style is not needed, type "null" after the variable and the compiler will ignore the style.
+
+Class Output: .progress-bar--$progress-bar-modifier
+
+Example: .progress-bar--primary
+
+Variables Options
+
+$progress-bar-modifier:
+
+$progress-bar-circle-color:
+
+$progress-bar-font-color:
+
+$progress-bar-color:
+     
+$progress-bar-hover:
+
+markup:
+<body ng-app="">
+    <div class="{{ChangeTheme}}">
+        <select ng-model="ChangeTheme" class="dropdown--primary">
+            <option value="bofi-bankofinternet--blue">Bank Of Internet</option>
+            <option value="bofi-bankx--green">BankX</option>
+            <option value="bofi-netbank--navy">Netbank</option>
+            <option value="bofi-ufb--brown">UfbDirect</option>
+        </select>
+    </div>
+    <div ng-class="ChangeTheme">
+        <div class="flex-column--center bofi-col-50--lg">
+				<div class="bofi-col-100--lg flex-row--center progress-bar--primary">
+					<div class="bofi-col-25--lg circle">
+						<a class="number">1</a>
+					</div>
+    				<div class="bofi-col-25--lg circle">
+						<a class="number">2</a>
+					</div>
+		</div>
+    </div>
+</body>
+
+Styleguide 3.3
+*/
+/*
+Dropdown Menu
+
+This mixin defines and dynamically creates the logo classes. 
+Define the variables in the "config" folder. 
+The mixin never needs to be changed or edited. 
+If a style is not needed, type "null" after the variable and the compiler will ignore the style.
+
+Class Output: .menu--$dropdown-type
+
+Example: .menu--down
+
+Variables Options
+
+$dropdown-type: defines the dropdown menu class i.e down
+
+Styleguide 3.1
+*/
+/*
+User Profile Widget
+
+This mixin defines and dynamically creates the user profile widget classes. 
+Define the variables in the "config" folder. 
+The mixin never needs to be changed or edited. 
+If a style is not needed, type "null" after the variable and the compiler will ignore the style.
+
+$user-widget-font-color:
+
+$user-widget-background-color:
+
+$user-widget-font-menu-color:
+
+$user-widget-menu-background-color:
+
+$user-widget-name-margin:
+
+$user-widget-name-size:
+
+$user-widget-font-weight:
+
+$user-widget-icon-margin:
+     
+$user-widget-location:
+
+Styleguide 3.5
+*/
+/*
+Table Styles
+
+This mixin defines and dynamically creates the profile image class. 
+Define the variables in the "config" folder. 
+The mixin never needs to be changed or edited. 
+If a style is not needed, type "null" after the variable and the compiler will ignore the style.
+
+Class Output: .table--$table-modifier
+
+Example: .table--primary
+
+Variables Options
+
+$table-modifier:
+     
+$table-font-color:
+
+$table-head-font-size:
+
+$table-head-background:
+
+$table-head-text-align:
+
+$table-head-padding:
+
+$table-row-border-top:
+
+$table-row-border-bottom:
+
+$table-row-background:
+
+$table-row-font-size:
+
+$table-cell-background:
+
+$table-cell-font-size:
+
+$table-cell-padding:
+
+markup:
+markup:
+<div class="bofi-bankofinternet--blue">
+<div class="global">
+<br>
+<p>Note: The wrapper classes are not needed. The wrapper classes are simply to show themes.</p>
+ <br>
+<table class="table--primary">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Description</th>
+      <th>Account</th>
+      <th>Amount</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td</td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <tr>
+      <td>11/15/2016</td>
+      <td>SDG&E</td>
+      <td>Checking 1 *7891</td>
+      <td>$64.99</td>
+    </tr>
+    <tr>
+      <td>10/15/2016</td>
+      <td>SDG&E</td>
+      <td>Checking 1 *7891</td>
+      <td class="text--error"> - $78.23</td>
+    </tr>
+    <tr>
+      <td>9/15/2016</td>
+      <td>Paycheck</td>
+      <td>Checking 1 *7891</td>
+      <td class="text--success"> + $1,000.00</td>
+    </tr>
+  </tbody>
+</table>
+<div class="bofi-col-50--lg">
+<table class="table--primary">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Description</th>
+      <th>Account</th>
+      <th>Amount</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td></td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <tr>
+      <td>11/15/2016</td>
+      <td>SDG&E</td>
+      <td>Checking 1 *7891</td>
+      <td>$64.99</td>
+    </tr>
+    <tr>
+      <td>10/15/2016</td>
+      <td>SDG&E</td>
+      <td>Checking 1 *7891</td>
+      <td class="text--error"> - $78.23</td>
+    </tr>
+    <tr>
+      <td>9/15/2016</td>
+      <td>Paycheck</td>
+      <td>Checking 1 *7891</td>
+      <td class="text--success"> + $1,000.00</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+
+sg-wrapper:
+<div class="bofi-udb--blue" style="height: 250px;">
+   <sg-wrapper-content/>
+</div>
+
+Styleguide 3.4
+*/
+body, .global {
+  color: #364754;
+  font-family: "Libre Franklin", sans-serif !important;
+  font-weight: 300; }
+  body a, .global a {
+    color: #3877b7; }
+    body a:hover, .global a:hover {
+      text-decoration: underline;
+      color: #3877b7; }
+
+h1 {
+  font-size: 40px; }
+
+h2 {
+  font-size: 26px; }
+
+h3 {
+  font-size: 16px; }
+
+h1, h2, h3, h4, h5 {
+  font-weight: 300; }
+
+.text--capitalize {
+  font-size: 18px;
+  color: #364754;
+  text-decoration: none;
+  text-transform: uppercase;
+  line-height: 24px; }
+
+.text--light {
+  font-size: 26px;
+  color: #9B9B9B;
+  text-decoration: none; }
+
+.text--content {
+  font-size: 14px;
+  color: #364754;
+  text-decoration: none;
+  line-height: 24px; }
+
+.text--small {
+  font-size: 12px;
+  color: #364754;
+  text-decoration: none;
+  line-height: 24px; }
+
+.text--link {
+  font-size: 14px;
+  color: #3877b7;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 400; }
+  .text--link:hover {
+    text-decoration: underline; }
+
+/*
+List Styles
+
+This is the list styles.
+
+markup:
+<div class="list--bullets">
+    <ul>
+        <li>List Item</li>
+        <li>List Item</li>
+        <li>List Item</li>
+    </ul>
+</div>
+<div class="list--numbered">
+    <ul>
+        <li>List Item</li>
+        <li>List Item</li>
+        <li>List Item</li>
+    </ul>
+</div>
+
+sg-wrapper:
+<div class="bofi-ufb--brown">
+   <sg-wrapper-content/>
+</div>
+
+Styleguide 4.2.4
+*/
+.list--bullets ul {
+  color: #364754;
+  font-size: 16px;
+  line-height: 36px; }
+
+.list--numbered ul {
+  list-style-type: decimal;
+  color: #364754;
+  font-size: 16px;
+  line-height: 36px; }
+
+/*
+Table Styles 
+
+This section describes the table styles. 
+
+Styleguide 4.3
+*/
+/*
+Default Table
+
+Angular Component: No
+
+Expected Conversion Date: N/A
+
+This examples shows how the width can be controlled with a grid.
+
+markup:
+<table class="table--primary">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Description</th>
+      <th>Account</th>
+      <th>Amount</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td</td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <tr>
+      <td>11/15/2016</td>
+      <td>SDG&E</td>
+      <td>Checking 1 *7891</td>
+      <td>$64.99</td>
+    </tr>
+    <tr>
+      <td>10/15/2016</td>
+      <td>SDG&E</td>
+      <td>Checking 1 *7891</td>
+      <td class="text--error"> - $78.23</td>
+    </tr>
+    <tr>
+      <td>9/15/2016</td>
+      <td>Paycheck</td>
+      <td>Checking 1 *7891</td>
+      <td class="text--success"> + $1,000.00</td>
+    </tr>
+  </tbody>
+</table>
+<div class="bofi-col-50--lg">
+<table class="table--primary">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Description</th>
+      <th>Account</th>
+      <th>Amount</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td</td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <tr>
+      <td>11/15/2016</td>
+      <td>SDG&E</td>
+      <td>Checking 1 *7891</td>
+      <td>$64.99</td>
+    </tr>
+    <tr>
+      <td>10/15/2016</td>
+      <td>SDG&E</td>
+      <td>Checking 1 *7891</td>
+      <td class="text--error"> - $78.23</td>
+    </tr>
+    <tr>
+      <td>9/15/2016</td>
+      <td>Paycheck</td>
+      <td>Checking 1 *7891</td>
+      <td class="text--success"> + $1,000.00</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+sg-wrapper:
+<div class="bofi-ufb--brown">
+   <sg-wrapper-content/>
+</div>
+
+Styleguide 4.3.1
+*/
+.table--primary {
+  color: #364754;
+  width: 100%; }
+  .table--primary thead {
+    font-size: 14px;
+    background-color: #F9F9F9; }
+    .table--primary thead th {
+      text-align: left;
+      padding: 12px 0 12px 10px; }
+  .table--primary tbody tr,
+  .table--primary tbody .row {
+    border-bottom: 1px solid #9B9B9B;
+    background-color: #ffffff;
+    font-size: 18px; }
+  .table--primary tbody td,
+  .table--primary tbody .cell {
+    padding: 15px 0 15px 10px; }
+
+/*
+Table with Two Lines 
+
+markup:
+
+sg-wrapper:
+<div class="bofi-ufb--brown" style="padding: 10px; text-align: center;">
+   <sg-wrapper-content/>
+</div>
+
+Styleguide 4.3.2
+*/
+/*
+Form Fields
+
+This section describes the form styles.
+
+Styleguide 4.4
+*/
+/*
+Labels
+
+markup:
+<label for = "" class="label--primary">Primary Label</label>
+
+sg-wrapper:
+<div class="bofi-ufb--brown" style="padding: 10px; text-align: center;">
+   <sg-wrapper-content/>
+</div>
+
+Styleguide 4.4.1
+*/
+.label--primary {
+  font-size: 12px;
+  color: #364754;
+  padding: 8px 0;
+  text-transform: none;
+  display: block; }
+
+.input--primary {
+  position: relative; }
+  .input--primary input {
+    background-color: #ffffff;
+    border: 1px solid #DEDFE1;
+    color: #364754;
+    padding: 16px;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+    letter-spacing: 2px; }
+    .input--primary input:focus, .input--primary input:hover {
+      border: 1px solid #3877b7; }
+    .input--primary input:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0px 1000px white inset; }
+  .input--primary.error input, .input--primary .ng-invalid-required.ng-touched input {
+    border: 1px solid #E35235; }
+
+.input--icon {
+  position: relative; }
+  .input--icon input {
+    background-color: #ffffff;
+    border: 1px solid #DEDFE1;
+    color: #364754;
+    padding: 15px 10px 15px 40px;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+    letter-spacing: 2px; }
+    .input--icon input:focus, .input--icon input:hover {
+      border: 1px solid #3877b7; }
+    .input--icon input:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0px 1000px white inset; }
+  .input--icon.error input, .input--icon .ng-invalid-required.ng-touched input {
+    border: 1px solid #E35235; }
+  .input--icon i {
+    position: absolute;
+    top: 13px;
+    left: 10px;
+    color: #9B9B9B; }
+
+.input--amount {
+  position: relative; }
+  .input--amount input {
+    background-color: #ffffff;
+    border: 1px solid #DEDFE1;
+    color: #364754;
+    padding: 15px 10px 15px 40px;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+    letter-spacing: 2px; }
+    .input--amount input:focus, .input--amount input:hover {
+      border: 1px solid #3877b7; }
+    .input--amount input:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0px 1000px white inset; }
+  .input--amount.error input, .input--amount .ng-invalid-required.ng-touched input {
+    border: 1px solid #E35235; }
+  .input--amount input {
+    text-align: right; }
+  .input--amount i {
+    position: absolute;
+    top: 13px;
+    left: 10px;
+    color: #9B9B9B; }
+    .input--amount i::before {
+      font-size: 24px; }
+
+.input--secondary {
+  position: relative; }
+  .input--secondary input {
+    background-color: inherit;
+    border: 0;
+    border-bottom: 1px solid #DEDFE1;
+    color: #364754;
+    padding: 10px 0;
+    border-radius: 0;
+    font-size: 16px;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+    letter-spacing: 2px; }
+    .input--secondary input:focus, .input--secondary input:hover {
+      border: 0;
+      border-bottom: 1px solid #3877b7; }
+    .input--secondary input:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0px 1000px white inset; }
+  .input--secondary.error input, .input--secondary .ng-invalid-required.ng-touched input {
+    border: 1px solid #E35235; }
+
+/*
+Dropdowns
+
+markup:
+
+sg-angular-directive:
+name: UIKit.Components
+template: /angular/components/dropdown/dropdown.html
+file: /angular/components/dropdown/dropdown.js
+
+Styleguide 4.4.3
+*/
+.dropdown-wrapper.expanded::after {
+  content: "";
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10000; }
+
+.dropdown-wrapper.expanded input {
+  border-color: #DEDFE1;
+  border-bottom-color: transparent !important;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0; }
+
+.dropdown-wrapper.expanded .dropdown--primary .dropdown-options {
+  display: block; }
+
+.dropdown-wrapper .dropdown--primary {
+  border-radius: 16px;
+  cursor: default;
+  outline: none;
+  position: relative;
+  user-select: none;
+  z-index: 100001; }
+  .dropdown-wrapper .dropdown--primary select {
+    display: none; }
+  .dropdown-wrapper .dropdown--primary input {
+    user-select: none; }
+  .dropdown-wrapper .dropdown--primary .expand {
+    left: 100% !important;
+    margin-left: -30px;
+    position: absolute;
+    top: 13px; }
+  .dropdown-wrapper .dropdown--primary .dropdown-options {
+    background: 4px;
+    border: 1px solid 16px;
+    border-top-width: 0 !important;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    display: none;
+    list-style: none;
+    position: absolute;
+    width: 100%;
+    z-index: 100; }
+    .dropdown-wrapper .dropdown--primary .dropdown-options li {
+      height: #DEDFE1;
+      line-height: #DEDFE1;
+      padding: 0 16px; }
+      .dropdown-wrapper .dropdown--primary .dropdown-options li:hover, .dropdown-wrapper .dropdown--primary .dropdown-options li.selected {
+        background: #3877b7;
+        color: #364754; }
+
+/*
+Buttons 
+
+This section describes the buttons. Use the variables below to define your button styles. To ignore a style enter "null." 
+
+Styleguide 3.5
+*/
+.btn--primary-lg {
+  background: #5791cb;
+  background: -webkit-linear-gradient(top, #5791cb, #3877b7);
+  background: linear-gradient(to bottom, #5791cb, #3877b7);
+  border-radius: 4px;
+  border: none;
+  padding: 18px 60px;
+  color: #ffffff;
+  font-size: 16px;
+  min-width: auto;
+  text-transform: uppercase; }
+  .btn--primary-lg:hover {
+    opacity: 0.85; }
+  .btn--primary-lg i {
+    color: #ffffff;
+    margin-left: 10px; }
+
+.btn--primary-sm {
+  background: #5791cb;
+  background: -webkit-linear-gradient(top, #5791cb, #3877b7);
+  background: linear-gradient(to bottom, #5791cb, #3877b7);
+  border-radius: 4px;
+  border: none;
+  padding: 16px 40px;
+  color: #ffffff;
+  font-size: 16px;
+  min-width: auto;
+  text-transform: uppercase; }
+  .btn--primary-sm:hover {
+    opacity: 0.85; }
+  .btn--primary-sm i {
+    color: #ffffff;
+    margin-left: 10px; }
+
+.btn--secondary-lg {
+  background: #ffffff;
+  background: -webkit-radial-gradient(center, ellipse cover, #ffffff, #ffffff);
+  background: radial-gradient(ellipse at center, #ffffff, #ffffff);
+  border-radius: 4px;
+  border: 1px solid #3877b7;
+  padding: 18px 60px;
+  color: #3877b7;
+  font-size: 16px;
+  min-width: auto;
+  text-transform: uppercase; }
+  .btn--secondary-lg:hover {
+    opacity: 0.85; }
+  .btn--secondary-lg i {
+    color: #ffffff;
+    margin-left: 10px; }
+
+.btn--secondary-sm {
+  background: #ffffff;
+  background: -webkit-radial-gradient(center, ellipse cover, #ffffff, #ffffff);
+  background: radial-gradient(ellipse at center, #ffffff, #ffffff);
+  border-radius: 4px;
+  border: 1px solid #3877b7;
+  padding: 16px 40px;
+  color: #3877b7;
+  font-size: 16px;
+  min-width: auto;
+  text-transform: uppercase; }
+  .btn--secondary-sm:hover {
+    opacity: 0.85; }
+  .btn--secondary-sm i {
+    color: #ffffff;
+    margin-left: 10px; }
+
+/*
+Alternative Button - Black
+
+markup:
+    <button class="btn--alternative-lg">Alternative Button</button>
+    <button class="btn--alternative-sm">Alternative Button</button>
+
+sg-wrapper:
+<div class="bofi-udb--blue" style="padding: 10px; text-align: center;">
+   <sg-wrapper-content/>
+</div>
+
+Styleguide 3.5.3
+*/
+.btn--alternative-lg {
+  background: #4a6173;
+  background: -webkit-linear-gradient(top, #4a6173, #364754);
+  background: linear-gradient(to bottom, #4a6173, #364754);
+  border-radius: 4px;
+  border: none;
+  padding: 18px 60px;
+  color: #ffffff;
+  font-size: 16px;
+  min-width: auto;
+  text-transform: uppercase; }
+  .btn--alternative-lg:hover {
+    opacity: 0.85; }
+  .btn--alternative-lg i {
+    color: #ffffff;
+    margin-left: 10px; }
+
+.btn--alternative-sm {
+  background: #4a6173;
+  background: -webkit-linear-gradient(top, #4a6173, #364754);
+  background: linear-gradient(to bottom, #4a6173, #364754);
+  border-radius: 4px;
+  border: none;
+  padding: 16px 40px;
+  color: #ffffff;
+  font-size: 16px;
+  min-width: auto;
+  text-transform: uppercase; }
+  .btn--alternative-sm:hover {
+    opacity: 0.85; }
+  .btn--alternative-sm i {
+    color: #ffffff;
+    margin-left: 10px; }
+
+/*
+Controllers
+
+This section describes the controller elements like radio buttons and checkboxes 
+     
+Styleguide 4.6
+*/
+/*
+Validation
+
+This section describes the validation elements like alerts, confirmations, tooltips
+     
+Styleguide 4.7
+*/
+/*
+Validation text
+
+This section describes validation text
+
+markup:
+<p class="text--error">error text</p>
+<p class="text--success">success text</p>
+
+sg-wrapper:
+<div class="bofi-ufb--brown" style="padding: 10px; text-align: center;">
+   <sg-wrapper-content/>
+</div>
+     
+Styleguide 4.7.1
+*/
+.text--error {
+  font-size: inherit;
+  color: #E35235;
+  text-decoration: none; }
+
+.text--success {
+  font-size: inherit;
+  color: #8eb870;
+  text-decoration: none;
+  font-weight: 300; }
+
+/*
+Dialog Boxes
+
+This section describes the dialog boxes or modals
+     
+Styleguide 4.8
+*/
+.nav--primary {
+  background: #3877b7;
+  margin: 0; }
+  .nav--primary ul {
+    list-style: none;
+    padding: 0;
+    position: relative;
+    max-width: 1440px;
+    margin: 0 auto; }
+  .nav--primary li {
+    height: 50px; }
+  .nav--primary a {
+    color: #ffffff;
+    font-size: 16px;
+    text-decoration: none;
+    height: 100%;
+    width: 100%; }
+    .nav--primary a:hover {
+      color: #ffffff;
+      font-weight: bold;
+      position: relative; }
+      .nav--primary a:hover::after {
+        content: "";
+        width: 0;
+        height: 0;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-bottom: 6px solid #ffffff;
+        position: absolute;
+        bottom: 0; }
+  .nav--primary .nav--secondary {
+    display: none; }
+  .nav--primary li:hover .nav--secondary {
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    display: initial;
+    display: flex; }
+
+.nav--secondary {
+  background: #4384c5;
+  margin: 0; }
+  .nav--secondary ul {
+    list-style: none;
+    padding: 30px;
+    position: relative;
+    margin: 0 auto; }
+  .nav--secondary li {
+    height: auto; }
+  .nav--secondary a {
+    color: #ffffff;
+    font-size: 14px;
+    text-decoration: none;
+    height: 100%;
+    width: 100%; }
+    .nav--secondary a:hover {
+      color: #ffffff;
+      font-weight: 400;
+      position: relative; }
+      .nav--secondary a:hover::after {
+        content: "";
+        width: 0;
+        height: 0;
+        border-left: 0px solid transparent;
+        border-right: 0px solid transparent;
+        border-bottom: 0px solid; }
+
+/*
+Dropdown menu
+
+This is the dropdown menu functionality without any styles applied
+
+markup:
+<div class="flex-row--default menu--down">
+            <input type="checkbox" id="InitMenu" />
+            <label for="InitMenu" class="toggle-menu">
+                <span>Dropdown Example</span>
+                <i class="fa fa-caret-down" aria-hidden="true"></i>
+            </label>
+            <ul class="menu--down-hide">
+                <li><a>Link</a></li>
+                <li><a>Link</a></li>
+            </ul>
+</div>
+
+sg-wrapper:
+<div class="bofi-ufb--brown" style="height: 50px;">
+   <sg-wrapper-content/>
+</div>
+
+Styleguide 4.9.3
+*/
+.menu--down {
+  position: relative;
+  z-index: 101; }
+  .menu--down .menu--down-hide {
+    position: absolute;
+    right: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    display: none; }
+  .menu--down input[type="checkbox"] {
+    display: none; }
+  .menu--down #InitMenu:checked + label + ul {
+    display: block; }
+
+/*
+User Profile Widget using Dropdown Menu
+
+This is the dropdown nav functionality without any styles applied
+
+markup:   
+     <div class="flex-row--default user-profile--widget menu--down bofi-col-33--lg">
+            <input type="checkbox" id="InitMenu"/>
+            <label for="InitMenu" class="toggle-menu">
+                <span class="profile-image">
+                    <span class="user-inititals center-align">JJ</span>
+                </span>
+                <span class="user-profile--name">James Jones</span>
+                <i class="material-icons">arrow_drop_down</i>
+            </label>
+            <ul class="user-profile--menu  menu--down-hide">
+                <li class="user-profile--menu-item"><a>Link</a></li>
+                <li class="user-profile--menu-item"><a>Link</a></li>
+            </ul>
+        </div>
+
+sg-wrapper:
+<div class="bofi-ufb--brown" style="height: 250px;">
+    <style>
+    @font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons'), local('MaterialIcons-Regular'), url(https://fonts.gstatic.com/s/materialicons/v20/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
+}
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+    </style>
+   <sg-wrapper-content/>
+</div>
+
+Styleguide 4.9.4
+*/
+.profile-image {
+  width: 70px;
+  height: 70px;
+  display: inline-block;
+  vertical-align: middle; }
+  .profile-image img {
+    width: 100%;
+    height: 100%; }
+
+.user-inititals {
+  font-weight: lighter;
+  font-size: 2em;
+  width: 100%;
+  height: 100%;
+  background-color: purple; }
+
+.user-profile--widget {
+  color: #ffffff;
+  background-color: #364754;
+  width: auto; }
+  .user-profile--widget .toggle-menu {
+    cursor: pointer; }
+
+label {
+  font-weight: initial;
+  margin: 0; }
+
+.user-profile--menu {
+  background-color: #ffffff;
+  color: #ffffff;
+  top: 55px; }
+  .user-profile--menu .user-profile--menu-item {
+    cursor: pointer;
+    padding: 15px;
+    border: 1px solid #b8c6d1;
+    border-top-width: 0;
+    color: #364754; }
+    .user-profile--menu .user-profile--menu-item:hover {
+      background-color: #F9F9F9; }
+      .user-profile--menu .user-profile--menu-item:hover a {
+        background-color: #ffffff; }
+
+.user-profile--name {
+  margin: 0 40px 0 20px;
+  font-size: 18px;
+  font-weight: 300; }
+  .user-profile--name + i {
+    margin: 0 20px 0 0;
+    font-size: 1.3em; }
+
+/*
+Toolbar Component 
+
+This is the toolbar component combined by multiple components
+
+markup:
+<div class="toolbar flex-row--default bofi-col-100--lg">
+    <span class="logo--header bofi-col-20--lg center"></span>
+    <div class="flex-row--flex-end bofi-col-100--lg">
+        <div class="icon--stacked center">
+            <a>
+                <i class="material-icons">message</i>
+                <div class="icon-label">MESSAGES</div>
+            </a>
+        </div>
+        <div class="icon--stacked center">
+            <a>
+                <i class="fa fa-bell fa-invert"></i>
+                <div class="icon-label">ALERTS</div>
+            </a>
+        </div>
+        <div class="icon--stacked center">
+            <a>
+                <i class="material-icons">help_outline</i>
+                <div class="icon-label">SUPPORT</div>
+            </a>
+        </div>
+     <div class="flex-row--default user-profile--widget menu--down">
+            <input type="checkbox" id="InitMenu"/>
+            <label for="InitMenu" class="toggle-menu">
+                <span class="profile-image">
+                    <span class="user-inititals center-align">JJ</span>
+                </span>
+                <span class="user-profile--name">James Jones</span>
+                <i class="material-icons">arrow_drop_down</i>
+            </label>
+            <ul class="user-profile--menu  menu--down-hide">
+                <li class="user-profile--menu-item"><a>Link</a></li>
+                <li class="user-profile--menu-item"><a>Link</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+sg-wrapper:
+<div class="bofi-ufb--brown" style="height:250px;">
+    <style>
+    @font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons'), local('MaterialIcons-Regular'), url(https://fonts.gstatic.com/s/materialicons/v20/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
+}
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+    </style>
+   <sg-wrapper-content/>
+</div>
+
+Styleguide 4.9.5
+*/
+.icon--stacked {
+  padding: 0 1.1%;
+  text-align: center; }
+  .icon--stacked a {
+    color: #ffffff;
+    text-decoration: none; }
+    .icon--stacked a:hover {
+      opacity: 0.7; }
+    .icon--stacked a i {
+      font-size: 20px; }
+  .icon--stacked .icon-label {
+    font-size: 10px;
+    margin: 5px 0 0; }
+
+.toolbar {
+  background-color: #364754; }
+
+/*
+Progress Bar 
+
+This is a progress bar with navigation to click through steps
+
+markup:
+<div class="bofi-col-100--lg flex-row--center progress-bar--primary">
+					<div class="bofi-col-25--lg circle"">
+						<a class="number">1</a>
+					</div>
+</div>
+
+sg-wrapper:
+<div class="bofi-ufb--brown" style="height: 50px;">
+   <sg-wrapper-content/>
+</div>
+
+Styleguide 4.9.6
+*/
+.progress-bar--primary .circle {
+  position: relative;
+  text-align: right; }
+  .progress-bar--primary .circle a {
+    border-radius: 50px;
+    line-height: 12px;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    padding: 10px;
+    background-color: #3877b7;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 20px;
+    z-index: 1;
+    position: relative; }
+    .progress-bar--primary .circle a:hover {
+      background-color: #3877b7; }
+    .progress-bar--primary .circle a:active {
+      background-color: #3877b7; }
+  .progress-bar--primary .circle.active a {
+    background-color: #3877b7; }
+  .progress-bar--primary .circle.active:before {
+    border-color: #3877b7; }
+  .progress-bar--primary .circle:before {
+    content: "";
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    left: -10px;
+    top: 15px;
+    border: 1px solid #3877b7;
+    position: absolute; }
+  .progress-bar--primary .circle:first-child {
+    width: auto; }
+    .progress-bar--primary .circle:first-child:before {
+      display: none; }
+
+/*
+Page Stucture
+
+This section describes the page structure components like header, footer, hero, etc
+     
+Styleguide 4.10
+*/
+/*
+Container
+
+This section describes how to create a container
+
+markup:
+
+sg-wrapper:
+<div class="bofi-ufb--brown" style="height: 50px;">
+   <sg-wrapper-content/>
+</div>
+
+Styleguide 4.10.1
+*/
+.container--center {
+  width: 1440px;
+  margin: 0 auto;
+  padding: 10px;
+  background: #ffffff;
+  height: 100vh; }
+
+/*
+Hero
+
+This is a hero component
+
+markup:
+
+sg-wrapper:
+<div class="bofi-ufb--brown" style="height: 50px;">
+   <sg-wrapper-content/>
+</div>
+
+Styleguide 4.10.2
+*/
+.hero {
+  background-color: #4384c5;
+  margin: 0;
+  height: auto;
+  padding: 20px 0 40px; }
+  .hero img {
+    width: 100%;
+    height: auto; }
+  .hero h1 {
+    font-size: 45px;
+    font-weight: lighter;
+    color: #ffffff; }
+  .hero p {
+    color: #ffffff;
+    margin: 0 0 30px; }
+
+/*
+Groups
+
+This section describes how to create groups which is mainly used to create white space between elements
+
+markup:
+
+sg-wrapper:
+<div class="bofi-udb--blue" style="height: 50px;">
+   <sg-wrapper-content/>
+</div>
+
+Styleguide 3.11.3
+*/
+.group--form {
+  margin: 0 0 25px 0; }
+
+.text--error {
+  position: absolute; }
+
+/*
+All Styles
+
+This section shows all the styles on one page
+     
+Styleguide 4.11
+*/
+/*
+Switch
+
+This section describes how to create a switch
+
+markup:
+
+Switch:
+<input type="checkbox" class="switch" id="test" />
+<label for="test">Testing the switch</label>
+*/
+input[type=checkbox].switch {
+  display: none; }
+
+input[type=checkbox].switch + label {
+  position: relative;
+  top: 13px; }
+
+input[type=checkbox].switch + label::before {
+  background: #DEDFE1;
+  border-radius: 16px;
+  content: " ";
+  display: inline-block;
+  height: 32px;
+  width: 52px; }
+
+input[type=checkbox].switch + label::after {
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 7px #9B9B9B;
+  content: "";
+  display: inline-block;
+  height: 28px;
+  left: 2px;
+  position: absolute;
+  top: 2px;
+  transition: left 0.3s;
+  width: 28px; }
+
+input[type=checkbox]:checked.switch + label::before {
+  background: #3877b7;
+  background: -webkit-linear-gradient(top, #3877b7, #2c5e90);
+  background: linear-gradient(to bottom, #3877b7, #2c5e90); }
+
+input[type=checkbox]:checked.switch + label::after {
+  left: 22px; }
+
+/*
+Checkbox
+
+This section describes how to create a checkbox
+
+markup:
+
+Switch:
+<input type="checkbox" class="checkbox" id="test" />
+<label for="test">Testing the switch</label>
+*/
+input[type=checkbox].checkbox {
+  display: none; }
+
+input[type=checkbox].checkbox + label {
+  position: relative;
+  top: 4px; }
+
+input[type=checkbox].checkbox + label::before {
+  background: #ffffff;
+  border: 1px solid #DEDFE1;
+  border-radius: 3px;
+  content: " ";
+  display: inline-block;
+  height: 20px;
+  width: 20px; }
+
+input[type=checkbox]:checked.checkbox + label::before {
+  background: #3877b7; }
+
+input[type=checkbox]:checked.checkbox + label::after {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAAAjklEQVRYhe3Tuw2AIBSFYTpLx/G5mB1ruYHj+Bjg2BCDgBX3GDH39Hx/AsEYnU6ne3cYMXH5A4Dl8iAlPJ4RKJwflP8vv3+VR40ZDZNfAKzPiTy+wuKObulE9t3DXscTCfQCT3tLtOL8c0KMjxKdOB8nxPkgsZN+rZdg8ImENB8kGLyXYPEuweR1Ol0BOwHTgJwTt8rAawAAAABJRU5ErkJggg==") center center no-repeat;
+  background-size: cover;
+  content: "";
+  display: inline-block;
+  height: 18px;
+  left: 1px;
+  position: absolute;
+  top: 1px;
+  width: 18px; }
+
+/*
+Radiobutton
+
+This section describes how to create a checkbox
+
+markup:
+
+Switch:
+<input type="radio" class="radio-button" id="test" />
+<label for="test">Testing the switch</label>
+*/
+input[type=radio].radio-button {
+  display: none; }
+
+input[type=radio].radio-button + label {
+  height: 20px;
+  padding-left: 25px;
+  position: relative;
+  top: 13px; }
+
+input[type=radio].radio-button + label::before {
+  background: #F9F9F9;
+  border: 1px solid #DEDFE1;
+  border-radius: 10px;
+  content: " ";
+  display: inline-block;
+  height: 20px;
+  left: 0;
+  position: absolute;
+  width: 20px; }
+
+input[type=radio]:checked.radio-button + label::after {
+  left: 2px;
+  background: #3877b7;
+  border-radius: 50%;
+  content: "";
+  display: inline-block;
+  height: 12px;
+  left: 4px;
+  position: absolute;
+  top: 4px;
+  transition: left 0.3s;
+  width: 12px; }
+
+.logo--lg-top {
+  display: inline-block;
+  height: 100px;
+  width: 270px;
+  margin: 30px 50px 10px;
+  background-image: url("/build/img/logos/netbank-logo.png");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  position: absolute; }
+
+.logo--sm-top {
+  display: inline-block;
+  height: 40px;
+  width: 130px;
+  margin: 10px;
+  background-image: url("/build/img/logos/netbank-logo.png");
+  background-size: 100% auto;
+  background-repeat: no-repeat; }

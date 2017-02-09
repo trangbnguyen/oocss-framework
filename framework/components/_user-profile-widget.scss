@@ -1,0 +1,83 @@
+﻿/*
+User Profile Widget
+
+This mixin defines and dynamically creates the user profile widget classes. 
+Define the variables in the "config" folder. 
+The mixin never needs to be changed or edited. 
+If a style is not needed, type "null" after the variable and the compiler will ignore the style.
+
+$user-widget-font-color:
+
+$user-widget-background-color:
+
+$user-widget-font-menu-color:
+
+$user-widget-menu-background-color:
+
+$user-widget-name-margin:
+
+$user-widget-name-size:
+
+$user-widget-font-weight:
+
+$user-widget-icon-margin:
+     
+$user-widget-location:
+
+Styleguide 3.5
+*/
+@mixin create-user-profile-widget ( 
+$user-widget-font-color, 
+$user-widget-background-color, 
+$user-widget-hover-color, 
+$user-widget-menu-background-color, 
+$user-widget-name-margin, 
+$user-widget-name-size, 
+$user-widget-font-weight, 
+$user-widget-icon-margin, 
+$user-widget-location, 
+$user-widget-menu-font-color) {
+    .user-profile--widget {
+        color: $user-widget-font-color;
+        background-color: $user-widget-background-color;
+        width: auto;
+        .toggle-menu {
+            cursor: pointer;
+        }
+    }
+    label { //resets
+        font-weight: initial;
+        margin: 0;
+    }
+    .user-profile--menu { //this is a separate element
+        background-color: $user-widget-menu-background-color;
+        color: $user-widget-font-color;
+        top: $user-widget-location;
+        .user-profile--menu-item {
+            cursor: pointer;
+            padding: 15px;
+            border: 1px solid lighten($user-widget-menu-font-color, 50%);
+            border-top-width: 0;
+            color: $user-widget-menu-font-color;
+
+            &:hover {
+                background-color: $user-widget-hover-color;
+
+                a {
+                    background-color: $user-widget-menu-background-color;
+                }
+            }
+        }
+    }
+
+    .user-profile--name {
+        margin: $user-widget-name-margin;
+        font-size: $user-widget-name-size;
+        font-weight: $user-widget-font-weight;
+
+        + i {
+            margin: $user-widget-icon-margin;
+            font-size: 1.3em;
+        }
+    }
+}

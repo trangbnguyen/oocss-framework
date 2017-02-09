@@ -1,0 +1,13 @@
+//
+//Dependencies
+//
+@import "./framework/framework";
+//
+//Theme
+//
+@import "./config/theme-options/themes/theme-config";
+@include create-theme-wrapper ($blue-skin, $bankofinternet-brand);
+@include create-theme-wrapper  ($green-skin, $bankx-brand);
+@include create-theme-wrapper  ($navy-skin, $netbank-brand);
+@include create-theme-wrapper  ($brown-skin, $ufb-brand);
+@include create-theme-wrapper ($blue-skin,$uikit-brand);

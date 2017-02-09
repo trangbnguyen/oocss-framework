@@ -1,0 +1,6 @@
+@mixin create-footer($footer-background, $footer-height) {
+    .footer {
+        background: $footer-background;
+        height: $footer-height;
+    }
+}

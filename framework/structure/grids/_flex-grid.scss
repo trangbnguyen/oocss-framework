@@ -1,0 +1,151 @@
+/*
+Flex Grid
+
+Flex grid can be combined with the traditional grid. You can use these classes a container or to position a single element. Read more here: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+Below are examples of all the flex classes available and how they affect the CSS objects.
+
+markup:
+<body ng-app="" class="bofi-bankofinternet--blue">
+    <div class="global">
+    <h3>Using Flex Row</h3>
+    <br>
+        <select ng-model="FlexRow" class="dropdown--primary">
+            <option value="flex-row--default">.flex-row--default</option>
+            <option value="flex-row--wrap">.flex-row--wrap</option>
+            <option value="flex-row--flex-end ">.flex-row--flex-end</option>
+            <option value="flex-row--center">.flex-row--center</option>
+            <option value="flex-row--space-around ">.flex-row--space-around </option>
+        </select>
+    </div>
+      <br>
+    <div ng-class="FlexRow" class="bofi-col-100--lg global example-col1">
+       <button class="btn--primary-lg bofi-col-33--lg">Button</button>
+       <button class="btn--secondary-lg bofi-col-33-lg">Button</button>
+        <button class="btn--alternative-lg bofi-col-33--lg">Button</button>
+    </div>
+     <br>
+     <div ng-class="FlexRow" class=" bofi-col-100--lg global">
+       <button class="btn--primary-lg bofi-col-50--lg">Button</button>
+       <button class="btn--secondary-lg bofi-col-33-lg">Button</button>
+        <button class="btn--alternative-lg bofi-col-33--lg">Button</button>
+    </div>
+      <br>
+     <div class="global">
+    <br>
+        <h3>Using Flex Column</h3>
+    <p>The first section has a set height in order to see the column.</p>
+    <br>
+        <select ng-model="FlexCol" class="dropdown--primary">
+            <option value="flex-column--default">.flex-column--default</option>
+            <option value="flex-column--wrap">.flex-column--wrap</option>
+            <option value="flex-column--flex-end ">.flex-column--flex-end </option>
+            <option value="flex-column--center">.flex-column--center</option>
+            <option value="flex-column--space-around ">.flex-column--space-around</option>
+        </select>
+    </div>
+      <br>
+    <div ng-class="FlexCol" class=" bofi-col-100--lg example-col">
+           <button class="btn--primary-lg bofi-col-25--lg">Button</button> 
+       <button class="btn--secondary-lg bofi-col-25--lg">Button</button> 
+        <button class="btn--alternative-lg bofi-col-60--lg">Button</button> 
+    <button class="btn--primary-lg bofi-col-25--lg">Button</button> 
+    </div>
+          <br>
+    <div ng-class="FlexCol" class=" bofi-col-100--lg">
+       <button class="btn--primary-lg bofi-col-25--lg">Button</button> 
+       <button class="btn--secondary-lg bofi-col-25--lg">Button</button> 
+        <button class="btn--alternative-lg bofi-col-25--lg">Button</button> 
+    <button class="btn--primary-lg bofi-col-25--lg">Button</button> 
+    </div>
+</body>
+
+sg-wrapper:
+<style>
+    .example-col {
+    height: 300px;
+    background-color: #DEDFE1;
+    padding:20px
+    }
+    .example-col1 {
+    background-color: #DEDFE1;
+    padding:20px
+    }
+</style>
+<sg-wrapper-content/>
+      
+Styleguide 6.2
+*/
+
+/**
+ * Generic mixin to create flex properties.
+ * Read: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+ * This mixin has strict variable options.
+ * $type: row | row-reverse | column | column-reverse
+ * $wrap: wrap | no-wrap
+ * $alignment:  justify-content (row x-axis) | align-items (column y-axis)
+ * $modifer: flex-start | flex-end | center | space-between | space-around
+ */
+@mixin create-flex-prop($type, $wrap, $modifier, $alignment) {
+    .flex-#{$type}--#{$modifier} {
+        display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+        display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+        display: -ms-flexbox; /* TWEENER - IE 10 */
+        display: -webkit-flex; /* NEW - Chrome */
+        display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+        flex-direction: $type;
+        flex-wrap: $wrap;
+        #{$alignment}: $modifier;
+    }
+}
+//
+//flex containers
+//
+//Row
+// Class name: .flex-row--default
+@include create-flex-prop (row, nowrap,default,justify-content);
+// Class name: .flex-row--wrap
+@include create-flex-prop (row, wrap,wrap,justify-content);
+// Class name: .flex-row--flex-end
+@include create-flex-prop (row, nowrap, flex-end, justify-content);
+// Class name: .flex-row--center
+@include create-flex-prop (row, wrap, center, justify-content);
+// Class name: .flex-row--space-around
+@include create-flex-prop (row, wrap, space-around, justify-content);
+
+
+//Column
+// Class name: .flex-column--default
+@include create-flex-prop (column, nowrap,default,justify-content);
+// Class name: .flex-column--wrap
+@include create-flex-prop (column, wrap,wrap,justify-content);
+// Class name: .flex-column--flex-end
+@include create-flex-prop (column, nowrap, flex-end, justify-content);
+// Class name: .flex-column--center
+@include create-flex-prop (column, nowrap,center,align-items);
+// Class name: .flex-column--space-around
+@include create-flex-prop (column, wrap, space-around, justify-content);
+
+//Flex child overrides
+$prop: flex-start, flex-end, center, baseline, stretch;
+
+@each $align-self in $prop {
+    //generates .flex-start, .flex-end, .center, .baseline, stretch
+    //these classes can only be used on the direct children of flex containers
+    $i: index($prop, $align-self);
+
+    .#{$align-self} {
+        align-self: $align-self;
+    }
+}
+
+//Centers any item
+.center-align {
+    align-items: center;
+    justify-content: center;
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox; /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Chrome */
+    display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}

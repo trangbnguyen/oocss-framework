@@ -1,0 +1,8 @@
+﻿@mixin create-group-spacing ($group-modifier,$group-margin){
+    .group--#{$group-modifier} {
+        margin: $group-margin;
+    }
+    .text--error {
+        position:absolute;
+    }
+}

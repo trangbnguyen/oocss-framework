@@ -1,0 +1,45 @@
+﻿/*
+Dropdown Menu
+
+This mixin defines and dynamically creates the logo classes. 
+Define the variables in the "config" folder. 
+The mixin never needs to be changed or edited. 
+If a style is not needed, type "null" after the variable and the compiler will ignore the style.
+
+Class Output: .menu--$dropdown-type
+
+Example: .menu--down
+
+Variables Options
+
+$dropdown-type: defines the dropdown menu class i.e down
+
+Styleguide 3.1
+*/
+@mixin create-dropdown-menu-actions($dropdown-type) {
+
+    @if $dropdown-type =="down" {
+        .menu--#{$dropdown-type} {
+            position: relative;
+            z-index:101;
+
+            .menu--#{$dropdown-type}-hide {
+                position: absolute;
+                right: 0;
+                padding: 0;
+                list-style: none;
+                width: 100%;
+                display: none;
+            }
+
+            input[type="checkbox"] {
+                display: none;
+            }
+
+            #InitMenu:checked + label + ul  {
+                display: block;
+            }
+        }
+    }
+}
+

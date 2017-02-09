@@ -1,0 +1,755 @@
+@import "../../../styleguide/_styleguide.scss";
+@mixin blue {
+    $blue: #4D98D6;
+    $green: #8eb870;
+    $orange: #EF965D;
+
+    $very-light-grey: #F9F9F9;
+    $light-grey: #DEDFE1;
+    $medium-grey: #9B9B9B;
+    $dark-grey: #364754;
+
+    $red: #E35235;
+    $success-green: #8eb870;
+
+    $white: #ffffff;
+    $black: #000000;
+
+    $primary-color: $blue;
+    $secondary-color: $green;
+    $tertiary-color: $orange;
+
+    $support-color-1: $dark-grey;
+    $support-color-2: $medium-grey;
+    $support-color-3: $light-grey;
+    $support-color-4: $very-light-grey;
+
+    $error-color: $red;
+    $success-color: $success-green;
+
+    $global-font-color: $support-color-1;
+    $global-font-family: 'Libre Franklin', sans-serif;
+    $global-font-weight: 300;
+    $global-link-color: $primary-color;
+    $global-hover: underline;
+    @include define-content ($global-font-color, $global-font-family, $global-font-weight,$global-link-color,$global-hover);
+
+    $h1: 40px;
+    $h2: 26px;
+    $h3: 16;
+    $h4: null;
+    $h5: null;
+    $header-font-weight: 300;
+    @include define-headers ($h1, $h2, $h3, $h4, $h5,$header-font-weight);
+    //
+    //capitalize text
+    //
+    $text-type: capitalize;
+    $text-size: 18px;
+    $text-color: $support-color-1;
+    $text-decoration: none;
+    $text-transform: uppercase;
+    $text-weight: null;
+    $text-line-height: 24px;
+    $text-hover: null;
+    @include create-text-styles ($text-type, $text-size, $text-color, $text-decoration, $text-transform, $text-weight,$text-line-height,$text-hover);
+    //
+    // light text
+    //
+    $text-type-3: light;
+    $text-size-3: 26px;
+    $text-color-3: $support-color-2;
+    $text-decoration-3: none;
+    $text-transform-3: null;
+    $text-weight-3: null;
+    $text-line-height-3: null;
+    $text-hover-3: null;
+    @include create-text-styles ($text-type-3, $text-size-3, $text-color-3, $text-decoration-3, $text-transform-3, $text-weight-3,$text-line-height-3,$text-hover-3);
+    //
+    // content text
+    //
+    $text-type-4: content;
+    $text-size-4: 14px;
+    $text-color-4: $support-color-1;
+    $text-decoration-4: none;
+    $text-transform-4: null;
+    $text-weight-4: null;
+    $text-line-height-4: 24px;
+    $text-hover-4: null;
+    @include create-text-styles ($text-type-4, $text-size-4, $text-color-4, $text-decoration-4, $text-transform-4, $text-weight-4,$text-line-height-4,$text-hover-4);
+    //
+    // small text
+    //
+    $text-type-5: small;
+    $text-size-5: 12px;
+    $text-color-5: $support-color-1;
+    $text-decoration-5: none;
+    $text-transform-5: null;
+    $text-weight-5: null;
+    $text-line-height-5: 24px;
+    $text-hover-5: null;
+    @include create-text-styles ($text-type-5, $text-size-5, $text-color-5, $text-decoration-5, $text-transform-5, $text-weight-5,$text-line-height-5,$text-hover-5);
+    //
+    // link text
+    //
+    $text-type-7: link;
+    $text-size-7: 14px;
+    $text-color-7: $primary-color;
+    $text-decoration-7: none;
+    $text-transform-7: uppercase;
+    $text-weight-7: 400;
+    $text-line-height-7: null;
+    $text-hover-7: underline;
+    @include create-text-styles ($text-type-7, $text-size-7, $text-color-7, $text-decoration-7, $text-transform-7, $text-weight-7,$text-line-height-7,$text-hover-7);
+
+    $list-modifier: bullets;
+    $list-style-type: null;
+    $list-font-color: $support-color-1;
+    $list-font-size: 16px;
+    $list-line-height: 36px;
+    @include create-list-style ( $list-modifier, $list-style-type, $list-font-color, $list-font-size, $list-line-height);
+
+    $list-modifier-2: numbered;
+    $list-style-type-2: decimal;
+    $list-font-color-2: $support-color-1;
+    $list-font-size-2: 16px;
+    $list-line-height-2: 36px;
+    @include create-list-style ( $list-modifier-2, $list-style-type-2, $list-font-color-2, $list-font-size-2, $list-line-height-2);
+
+    $table-modifier: primary;
+    $table-font-color: $support-color-1;
+    $table-head-font-size: 14px;
+    $table-head-background: $support-color-4;
+    $table-head-text-align: left;
+    $table-head-padding: 12px 0 12px 10px;
+    $table-row-border-top: null;
+    $table-row-border-bottom: 1px solid $support-color-2;
+    $table-row-background: $white;
+    $table-row-font-size: 18px;
+    $table-cell-padding: 15px 0 15px 10px;
+    $table-cell-background: null;
+    $table-cell-font-size: null;
+    @include create-table($table-modifier, $table-font-color, $table-head-font-size, $table-head-background, $table-head-text-align, $table-head-padding, $table-row-border-top, $table-row-border-bottom, $table-row-background, $table-row-font-size, $table-cell-background, $table-cell-font-size, $table-cell-padding);
+    //
+    //primary label
+    //
+    $label-modifier: primary;
+    $label-font-size: 12px;
+    $label-font-color: $support-color-1;
+    $label-padding: 8px 0;
+    $text-transform: none;
+    @include create-label( $label-modifier, $label-font-size, $label-font-color, $label-padding, $text-transform );
+    //
+    //input primary
+    //
+    $input-modifier: primary;
+    $input-background: $white;
+    $input-border: 1px solid $support-color-3;
+    $input-specific-border: null;
+    $input-font-color: $support-color-1;
+    $input-padding: 16px;
+    $input-border-radius: 4px;
+    $input-focus-border: 1px solid $primary-color;
+    $input-error-border: 1px solid $error-color;
+    $input-font-size: 16px;
+    $icon-position-top: 13px;
+    $icon-position-bottom: 10px;
+    $input-letter-spacing: 2px;
+    $icon-color: $support-color-2;
+    @include create-input( $input-modifier, $input-background, $input-border, $input-specific-border, $input-font-color, $input-padding, $input-border-radius,$input-focus-border, $input-error-border, $input-font-size, $icon-position-top, $icon-position-bottom,$icon-color,$input-letter-spacing);
+    //
+    //input with icon
+    //
+    $input-modifier-2: icon;
+    $input-padding-2: 15px 10px 15px 40px;
+    @include create-input( $input-modifier-2, $input-background, $input-border, $input-specific-border, $input-font-color, $input-padding-2, $input-border-radius,$input-focus-border, $input-error-border, $input-font-size, $icon-position-top, $icon-position-bottom,$icon-color,$input-letter-spacing);
+    //
+    //input with amount
+    //
+    $input-modifier-3: amount;
+    @include create-input( $input-modifier-3, $input-background, $input-border,$input-specific-border, $input-font-color, $input-padding-2, $input-border-radius,$input-focus-border, $input-error-border, $input-font-size, $icon-position-top, $icon-position-bottom,$icon-color,$input-letter-spacing);
+    //
+    //input secondary
+    //
+    $input-modifier-4: secondary;
+    $input-background-4: inherit;
+    $input-specific-border-4: bottom;
+    $input-border-4: 1px solid $support-color-3;
+    $input-font-color-4: $support-color-1;
+    $input-padding-4: 10px 0;
+    $input-border-radius-4: 0;
+    $input-focus-border-4: 1px solid $primary-color;
+    $input-error-border-4: 1px solid $error-color;
+    $input-font-size-4: 16px;
+    $icon-position-top-4: 13px;
+    $icon-position-bottom-4: 10px;
+    $input-letter-spacing-4: 2px;
+    $icon-color-4: $primary-color;
+    @include create-input( $input-modifier-4, $input-background-4, $input-border-4, $input-specific-border-4, $input-font-color-4, $input-padding-4, $input-border-radius-4,$input-focus-border-4, $input-error-border-4, $input-font-size-4, $icon-position-top-4, $icon-position-bottom-4,$icon-color-4,$input-letter-spacing-4);
+
+    $dropdown--modifier:						primary;
+	$dropdown-background-color:					$white;
+	$dropdown-border-color:						$support-color-3;
+	$dropdown-border-radius:					4px;
+	$dropdown-options-hover-background-color:	$support-color-4;
+	$dropdown-options-hover-font-color:			$primary-color;
+	$dropdown-options-height:					36px;
+
+	@include create-dropdown($dropdown--modifier, $dropdown-background-color, $dropdown-border-color, $dropdown-border-radius, $dropdown-options-hover-background-color, $dropdown-options-hover-font-color, $dropdown-options-height);
+    //
+    //global button styles
+    //
+    $button-lg-padding: 18px 60px;
+    $button-sm-padding: 16px 40px;
+    $button-hover: .85;
+    $button-text: uppercase;
+    $button-g-font-size: 16px;
+    $button-g-border-radius: 4px;
+    $button-g-width: auto;
+    //
+    //large primary button
+    //
+    $button-modifier: "primary-lg";
+    $button-border-radius: $button-g-border-radius;
+    $button-border: none;
+    $button-padding: $button-lg-padding;
+    $button-font-size: $button-g-font-size;
+    $button-font-color: $white;
+    $button-width: $button-g-width;
+    $button-gradient-start-color: lighten($primary-color,10%);
+    $button-gradient-end-color: $primary-color;
+    $button-gradient-orientation: vertical;
+    $button-opacity-hover: $button-hover;
+    $button-text-transform: $button-text;
+    $button-icon-color: $white;
+    @include create-btn( $button-modifier, $button-border-radius, $button-border, $button-padding, $button-font-size, $button-font-color, $button-width, $button-gradient-start-color, $button-gradient-end-color, $button-gradient-orientation, $button-opacity-hover,$button-text-transform, $button-icon-color);
+    //
+    //small primary button
+    //
+    $button-modifier-2: "primary-sm";
+    $button-padding-2: $button-sm-padding;
+    @include create-btn( $button-modifier-2, $button-border-radius, $button-border, $button-padding-2, $button-font-size, $button-font-color, $button-width, $button-gradient-start-color, $button-gradient-end-color, $button-gradient-orientation, $button-opacity-hover,$button-text-transform,$button-icon-color);
+    //
+    //large secondary button
+    //
+    $button-modifier-3: "secondary-lg";
+    $button-border-radius-3: $button-g-border-radius;
+    $button-border-3: 1px solid $primary-color;
+    $button-padding-3: $button-lg-padding;
+    $button-font-size-3: $button-g-font-size;
+    $button-font-color-3: $primary-color;
+    $button-width-3: $button-g-width;
+    $button-gradient-start-color-3: $white;
+    $button-gradient-end-color-3: $white;
+    $button-gradient-orientation-3: null;
+    $button-opacity-hover-3: $button-hover;
+    $button-text-transform-3: $button-text;
+    @include create-btn($button-modifier-3, $button-border-radius-3, $button-border-3, $button-padding-3, $button-font-size-3, $button-font-color-3, $button-width-3, $button-gradient-start-color-3, $button-gradient-end-color-3, $button-gradient-orientation-3, $button-opacity-hover-3,$button-text-transform-3,$button-icon-color);
+    //
+    //large secondary button
+    //
+    $button-modifier-4: "secondary-sm";
+    $button-padding-4: $button-sm-padding;
+    @include create-btn($button-modifier-4, $button-border-radius-3, $button-border-3, $button-padding-4, $button-font-size-3, $button-font-color-3, $button-width-3, $button-gradient-start-color-3, $button-gradient-end-color-3, $button-gradient-orientation-3, $button-opacity-hover-3,$button-text-transform-3,$button-icon-color);
+    //
+    //large alternative button
+    //
+    $button-modifier-5: "alternative-lg";
+    $button-border-radius-5: $button-g-border-radius;
+    $button-border-5: none;
+    $button-padding-5: $button-lg-padding;
+    $button-font-size-5: $button-g-font-size;
+    $button-font-color-5: $white;
+    $button-width-5: $button-g-width;
+    $button-gradient-start-color-5: lighten( $support-color-1, 10% );
+    $button-gradient-end-color-5: $support-color-1;
+    $button-gradient-orientation-5: vertical;
+    $button-opacity-hover-5: $button-hover;
+    $button-text-transform-5: $button-text;
+    @include create-btn($button-modifier-5, $button-border-radius-5, $button-border-5, $button-padding-5, $button-font-size-5, $button-font-color-5, $button-width-5, $button-gradient-start-color-5, $button-gradient-end-color-5, $button-gradient-orientation-5, $button-opacity-hover-5,$button-text-transform-5,$button-icon-color);
+    //
+    //small alternative button
+    //
+    $button-modifier-6: "alternative-sm";
+    $button-padding-6: $button-sm-padding;
+    @include create-btn($button-modifier-6, $button-border-radius-5, $button-border-5, $button-padding-6, $button-font-size-5, $button-font-color-5, $button-width-5, $button-gradient-start-color-5, $button-gradient-end-color-5, $button-gradient-orientation-5, $button-opacity-hover-5,$button-text-transform-5,$button-icon-color);
+    //
+    // validation text
+    //
+    $text-type-2: error;
+    $text-size-2: inherit;
+    $text-color-2: $error-color;
+    $text-decoration-2: none;
+    $text-transform-2: null;
+    $text-weight-2: null;
+    $text-line-height-2: null;
+    $text-hover-2: null;
+    @include create-text-styles ($text-type-2, $text-size-2, $text-color-2, $text-decoration-2, $text-transform-2, $text-weight-2,$text-line-height-2,$text-hover-2);
+    //
+    // success text
+    //
+    $text-type-6: success;
+    $text-size-6: inherit;
+    $text-color-6: $success-color;
+    $text-decoration-6: none;
+    $text-transform-6: null;
+    $text-weight-6: 300;
+    $text-line-height-6: null;
+    $text-hover-6: null;
+    @include create-text-styles ($text-type-6, $text-size-6, $text-color-6, $text-decoration-6, $text-transform-6, $text-weight-6,$text-line-height-6,$text-hover-6);
+    //
+    //primary nav
+    //
+    $nav-modifer: primary;
+    $nav-background: $primary-color;
+    $nav-padding: 0;
+    $nav-link-color: $white;
+    $nav-link-hover: $white;
+    $nav-hover-border: null;
+    $nav-height: 50px;
+    $nav-margin: 0;
+    $nav-font-size: 16px;
+    $nav-text-underline: none;
+    $nav-hover-font-weight: bold;
+    $hover-icon-size: 0px;
+    $hover-icon-color: null;
+    $hover-icon-position: null;
+    $hover-icon-bottom-position: null;
+    $hover-icon-left-position: null;
+    $nav-container: 1440px;
+    @include create-nav ( $nav-modifer, $nav-background, $nav-padding, $nav-link-color, $nav-link-hover, $nav-height, $nav-margin, $nav-font-size, $nav-text-underline, $nav-hover-font-weight, $nav-hover-border, $hover-icon-size, $hover-icon-color, $hover-icon-position, $hover-icon-bottom-position, $hover-icon-left-position, $nav-container );
+    //
+    //secondary nav
+    //
+    $nav-modifer-2: secondary;
+    $nav-background-2: $support-color-4;
+    $nav-padding-2: 0;
+    $nav-link-color-2: $support-color-1;
+    $nav-link-hover-2: $support-color-1;
+    $nav-hover-border-2: null;
+    $nav-height-2: 50px;
+    $nav-margin-2: 0;
+    $nav-font-size-2: 14px;
+    $nav-text-underline-2: none;
+    $nav-hover-font-weight-2: 400;
+    $hover-icon-size-2: 0px;
+    $hover-icon-color-2: transparent;
+    $hover-icon-position-2: null;
+    $hover-icon-bottom-position-2: null;
+    $hover-icon-left-position-2: null;
+    $nav-container-2: null;
+    @include create-nav ( $nav-modifer-2, $nav-background-2, $nav-padding-2, $nav-link-color-2, $nav-link-hover-2, $nav-height-2, $nav-margin-2, $nav-font-size-2, $nav-text-underline-2, $nav-hover-font-weight-2, $nav-hover-border-2, $hover-icon-size-2, $hover-icon-color-2, $hover-icon-position-2, $hover-icon-bottom-position-2, $hover-icon-left-position-2, $nav-container-2 );
+    //
+    //dropdown menu
+    //
+    $dropdown-type: down;
+    @include create-dropdown-menu-actions($dropdown-type);
+    /*
+User Profile Widget using Dropdown Menu
+
+This is the dropdown nav functionality without any styles applied
+
+markup:   
+     <div class="flex-row--default user-profile--widget menu--down bofi-col-33--lg">
+            <input type="checkbox" id="InitMenu"/>
+            <label for="InitMenu" class="toggle-menu">
+                <span class="profile-image">
+                    <span class="user-inititals center-align">JJ</span>
+                </span>
+                <span class="user-profile--name">James Jones</span>
+                <i class="material-icons">arrow_drop_down</i>
+            </label>
+            <ul class="user-profile--menu  menu--down-hide">
+                <li class="user-profile--menu-item"><a>Link</a></li>
+                <li class="user-profile--menu-item"><a>Link</a></li>
+            </ul>
+        </div>
+
+sg-wrapper:
+<div class="bofi-udb--blue" style="height: 250px;">
+    <style>
+    @font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons'), local('MaterialIcons-Regular'), url(https://fonts.gstatic.com/s/materialicons/v20/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
+}
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+    </style>
+   <sg-wrapper-content/>
+</div>
+
+Styleguide 3.9.4
+*/
+    //
+    //profile image-square
+    //
+    $profile-image-width: 70px;
+    $profile-image-height: 70px;
+    $profile-position: inline-block;
+    @include create-profile-image ( $profile-image-width, $profile-image-height, $profile-position);
+    //
+    //user initials
+    //
+    $user-initals-font-weight: lighter;
+    $user-initals-font-size: 2em;
+    $user-initals-background: purple;
+    @include create-user-initials ($user-initals-font-weight, $user-initals-font-size, $user-initals-background);
+    //
+    //user profile widget
+    //
+    $user-widget-font-color: $white;
+    $user-widget-background-color: $support-color-1;
+    $user-widget-hover-color: $support-color-4;
+    $user-widget-menu-background-color: $white;
+    $user-widget-name-margin: 0 40px 0 20px;
+    $user-widget-name-size: 18px;
+    $user-widget-font-weight: 300;
+    $user-widget-icon-margin: 0 20px 0 0;
+    $user-widget-location: 55px;
+    $user-widget-menu-font-color: $support-color-1;
+    @include create-user-profile-widget ( $user-widget-font-color, $user-widget-background-color, $user-widget-hover-color, $user-widget-menu-background-color, $user-widget-name-margin, $user-widget-name-size, $user-widget-font-weight, $user-widget-icon-margin, $user-widget-location,$user-widget-menu-font-color);
+    /*
+Toolbar Component 
+
+This is the toolbar component combined by multiple components
+
+markup:
+<div class="toolbar flex-row--default bofi-col-100--lg">
+    <span class="logo--header bofi-col-20--lg center"></span>
+    <div class="flex-row--flex-end bofi-col-100--lg">
+        <div class="icon--stacked center">
+            <a>
+                <i class="material-icons">message</i>
+                <div class="icon-label">MESSAGES</div>
+            </a>
+        </div>
+        <div class="icon--stacked center">
+            <a>
+                <i class="fa fa-bell fa-invert"></i>
+                <div class="icon-label">ALERTS</div>
+            </a>
+        </div>
+        <div class="icon--stacked center">
+            <a>
+                <i class="material-icons">help_outline</i>
+                <div class="icon-label">SUPPORT</div>
+            </a>
+        </div>
+     <div class="flex-row--default user-profile--widget menu--down">
+            <input type="checkbox" id="InitMenu"/>
+            <label for="InitMenu" class="toggle-menu">
+                <span class="profile-image">
+                    <span class="user-inititals center-align">JJ</span>
+                </span>
+                <span class="user-profile--name">James Jones</span>
+                <i class="material-icons">arrow_drop_down</i>
+            </label>
+            <ul class="user-profile--menu  menu--down-hide">
+                <li class="user-profile--menu-item"><a>Link</a></li>
+                <li class="user-profile--menu-item"><a>Link</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+sg-wrapper:
+<div class="bofi-udb--blue" style="height:250px;">
+    <style>
+    @font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons'), local('MaterialIcons-Regular'), url(https://fonts.gstatic.com/s/materialicons/v20/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
+}
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+    </style>
+   <sg-wrapper-content/>
+</div>
+
+Styleguide 3.9.5
+*/
+    //
+    // icons
+    //
+    $icon-padding: 0 1.1%;
+    $icon-font-color: $white;
+    $icon-label-font-size: 10px;
+    $icon-hover-option: .7;
+    $icon-font-size: 20px;
+    $icon-label-margin: 5px 0 0;
+    @include create-icon-stacked ( $icon-padding, $icon-font-color,$icon-label-font-size,$icon-hover-option, $icon-font-size,$icon-label-margin);
+
+    $toolbar-background: $support-color-1;
+    $toolbar-padding: null;
+    @include create-toolbar($toolbar-background,$toolbar-padding);
+    /*
+Progress Bar 
+
+This is a progress bar with navigation to click through steps
+
+markup:
+<div class="bofi-col-100--lg flex-row--center progress-bar--primary">
+					<div class="bofi-col-25--lg circle"">
+						<a class="number">1</a>
+					</div>
+</div>
+
+sg-wrapper:
+<div class="bofi-udb--blue" style="height: 50px;">
+   <sg-wrapper-content/>
+</div>
+
+Styleguide 3.9.6
+*/
+    //
+    //progress bar
+    //
+    $progress-bar-modifier: "primary";
+    $progress-bar-circle-color: $primary-color;
+    $progress-bar-font-color: $white;
+    $progress-bar-color: $primary-color;
+    $progress-bar-hover: $primary-color;
+    @include create-progress-bar ( $progress-bar-modifier, $progress-bar-circle-color, $progress-bar-font-color, $progress-bar-color, $progress-bar-hover );
+    /*
+Page Stucture
+
+This section describes the page structure components like header, footer, hero, etc
+     
+Styleguide 3.10
+*/
+    /*
+Container
+
+This section describes how to create a container
+
+markup:
+
+sg-wrapper:
+<div class="bofi-udb--blue" style="height: 50px;">
+   <sg-wrapper-content/>
+</div>
+
+Styleguide 3.10.1
+*/
+    //
+    //containers
+    //
+    $container-modifier: center;
+    $container-max-width: 1440px;
+    $container-margin: 0 auto;
+    $container-padding: 10px;
+    $container-background: $white;
+    @include create-container ( $container-modifier, $container-max-width, $container-margin, $container-padding, $container-background);
+    /*
+Hero
+
+This is a hero component
+
+markup:
+
+sg-wrapper:
+<div class="bofi-udb--blue" style="height: 50px;">
+   <sg-wrapper-content/>
+</div>
+
+Styleguide 3.10.2
+*/
+    //
+    //hero
+    //
+    $hero-background: $primary-color;
+    $hero-background-image: null;
+    $hero-margin: 0;
+    $hero-height: auto;
+    $hero-font-size: 45px;
+    $hero-font-color: $white;
+    $hero-padding: 20px 0 40px;
+    $hero-font-weight: lighter;
+    $hero-subline-margin: 0 0 30px;
+    @include create-hero-skin ( $hero-background,$hero-background-image, $hero-margin, $hero-height, $hero-font-size, $hero-font-color, $hero-padding, $hero-font-weight, $hero-subline-margin, $modifier: false);
+    /*
+Footer
+
+This section describes how to create a footer
+
+markup:
+
+sg-wrapper:
+<div class="bofi-udb--blue" style="height: 50px;">
+   <sg-wrapper-content/>
+</div>
+
+Styleguide 3.10.3
+*/
+    //
+    //footer
+    //
+    $footer-background: $support-color-3;
+    $footer-height: auto;
+    @include create-footer( $footer-background, $footer-height );
+    /*
+Groups
+
+This section describes how to create groups which is mainly used to create white space between elements
+
+markup:
+
+sg-wrapper:
+<div class="bofi-udb--blue" style="height: 50px;">
+   <sg-wrapper-content/>
+</div>
+
+Styleguide 3.11.3
+*/
+    //
+    //groups
+    //
+    $group-modifier: form;
+    $group-margin: 0 0 25px 0;
+    @include create-group-spacing ($group-modifier,$group-margin);
+    /*
+All Styles
+
+This section shows all the styles on one page
+     
+Styleguide 3.11
+*/
+    /*
+Switch
+
+This section describes how to create a switch
+
+markup:
+
+Switch:
+<input type="checkbox" class="switch" id="test" />
+<label for="test">Testing the switch</label>
+*/
+    //
+    //Switch
+    //
+
+    $switch-modifier: null;
+    $switch-off: $support-color-3;
+    $switch-on-color: $primary-color;
+    $switch-height: 32px;
+    $switch-width: 52px;
+    @include create-switch($switch-modifier, $switch-off, $switch-on-color, $switch-height, $switch-width);
+    /*
+Checkbox
+
+This section describes how to create a checkbox
+
+markup:
+
+Switch:
+<input type="checkbox" class="checkbox" id="test" />
+<label for="test">Testing the switch</label>
+*/
+    //
+    //Checkbox
+    //
+
+    $checkbox-modifier: null;
+    $checkbox-off: $white;
+    $checkbox-on-color: $primary-color;
+    $checkbox-border-color: $support-color-3;
+    $checkbox-height: 20px;
+    @include create-checkbox($checkbox-modifier, $checkbox-off, $checkbox-on-color, $checkbox-border-color, $checkbox-height);
+    /*
+Radiobutton
+
+This section describes how to create a checkbox
+
+markup:
+
+Switch:
+<input type="radio" class="radio-button" id="test" />
+<label for="test">Testing the switch</label>
+*/
+    //
+    //Checkbox
+    //
+
+    $radiobutton-modifier: null;
+    $radiobutton-off: $support-color-4;
+    $radiobutton-on-color: $primary-color;
+    $radiobutton-border-color: $support-color-3;
+    $radiobutton-height: 20px;
+    @include create-radio-button($radiobutton-modifier, $radiobutton-off, $radiobutton-on-color, $radiobutton-border-color, $radiobutton-height);
+    /*
+Alert
+
+This section describes how to create an alert
+
+markup:
+
+Alert:
+<alert id="alert-error" type="error" closable="false">
+	This is an error alert
+</alert>
+*/
+    //
+    //Alert
+    //
+
+    $alert-modifier: "error";
+    $alert-background-color: $error-color;
+    $alert-border-radius: 4px;
+    @include create-alert($alert-modifier, $alert-background-color, $alert-border-radius);
+
+
+    $alert-modifier: "success";
+    $alert-background-color: $secondary-color;
+    @include create-alert($alert-modifier, $alert-background-color, $alert-border-radius);
+    /*
+Dialog Boxes
+
+This section describes how to create a dialog box
+
+markup:
+
+Dialog Box:
+<div class="alert">
+</div>
+*/
+    //
+    //Dialog Box
+    //
+
+    $dialog-box-modifier: null;
+    $dialog-box-background-color: $white;
+    $dialog-box-title-background-color: $primary-color;
+    $dialog-box-title-font-color: $white;
+    @include create-dialog-box($dialog-box-modifier, $dialog-box-background-color, $dialog-box-title-background-color, $dialog-box-title-font-color);
+@include styleguide($primary-color);
+}

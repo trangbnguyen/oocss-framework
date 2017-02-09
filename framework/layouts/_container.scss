@@ -1,0 +1,19 @@
+/*
+Layouts
+
+Styleguide 5.1
+*/
+@mixin create-container (
+$container-modifier,
+$container-width, 
+$container-margin, 
+$container-padding, 
+$container-background) {
+   .container--#{$container-modifier} {
+     width: $container-width;
+     margin: $container-margin;
+     padding: $container-padding; 
+     background: $container-background; 
+     height: 100vh;
+}
+}

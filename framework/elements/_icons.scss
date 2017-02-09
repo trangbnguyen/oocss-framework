@@ -1,0 +1,39 @@
+/*
+Icons
+
+Class Output: 
+
+Example: 
+
+Variables Options
+
+Styleguide 2.5
+*/
+
+@mixin create-icon-stacked (
+$icon-padding, 
+$icon-font-color,
+$icon-label-font-size, 
+$icon-hover-option,
+$icon-font-size, 
+$icon-label-margin) {
+  .icon--stacked {
+    padding: $icon-padding;
+    text-align: center;
+    a {
+      color: $icon-font-color;
+      text-decoration: none;
+       &:hover {
+           opacity: $icon-hover-option;
+       }
+       i {
+           font-size: $icon-font-size;
+       }
+    }
+    .icon-label {
+        font-size: $icon-label-font-size;
+        margin: $icon-label-margin;
+    }
+  }
+}
+

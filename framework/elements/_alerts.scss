@@ -1,0 +1,65 @@
+/*
+Alerts
+
+This mixin defines and dynamically creates the button classes. 
+Change the variable in the skin sass file located in config "skins"
+If style is not needed, type "null" after the variable and the compiler will ignore the style.
+
+Class Output: .alert--$alert-modifier
+
+Example: .alert--primary
+
+Variables Options
+
+$alert-background-color: defines the color of the alert box
+
+$alert-font-color: defines the color of the font
+
+$alert-height: in pixels
+
+$alert-width: in pixels
+
+markup:
+
+Styleguide 2.1
+*/
+
+@mixin create-alert (
+	$alert-modifier,
+	$alert-background-color,
+	$alert-border-radius) {
+
+	@if ($alert-modifier != null) {
+		$alert-modifier: "--" + $alert-modifier;
+	}
+
+	.alert#{$alert-modifier} {
+		background: mix($alert-background-color, #fff, 10%);
+		border: 1px solid $alert-background-color;
+		border-radius: $alert-border-radius;
+		color: $alert-background-color;
+		cursor: default;
+		margin: 10px;
+		padding: 12px 14px 12px 60px;
+		width: 100%;
+
+		& .alert-icon, .alert-icon * {
+			float: left;
+			font-size: 28px;
+		}
+
+		& .alert-content {
+			float: left;
+			font-size: 16px;
+			height: 28px;
+			line-height: 28px;
+			margin-left: 15px;
+		}
+
+		& .alert-close, .alert-close * {
+			cursor: pointer;
+			float: right;
+			font-size: 28px;
+		}
+	}
+}

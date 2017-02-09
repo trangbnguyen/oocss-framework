@@ -1,0 +1,132 @@
+/*
+Global Font Styles
+
+This mixin defines the global font styles. 
+Define the variables in the "config" folder. 
+The mixin never needs to be changed or edited. 
+If a style is not needed, type "null" after the variable and the compiler will ignore the style.
+
+Variables Options
+
+$global-font-color: hex i.e #4286f4
+
+$global-font-family: font family i.e "Times New Roman", Georgia, Serif;
+
+$global-font-weight: same as CSS attributes i.e 300, bolder
+
+Styleguide 4.1
+*/
+@mixin define-content (
+    $global-font-color, 
+    $global-font-family, 
+    $global-font-weight,
+    $global-link-color,
+    $global-hover) { 
+    body, .global{
+    color: $global-font-color;
+    font-family: $global-font-family !important;
+    font-weight: $global-font-weight;
+    a {
+        color: $global-link-color;
+        &:hover {
+            text-decoration: $global-hover;
+            color: $global-link-color;
+        }
+    }
+    }
+}
+/*
+Global Headers
+
+This mixin defines the global header styles. 
+Define the variables in the "config" folder. 
+The mixin never needs to be changed or edited. 
+If a style is not needed, type "null" after the variable and the compiler will ignore the style.
+
+Variables Options
+
+$h1: defines h1 tags
+
+$h2: defines h2 tags
+
+$h3: defines h3 tags
+
+$h4: defines h4 tags
+
+$h5: defines h5 tags
+
+markup:
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+
+Styleguide 4.2
+*/
+@mixin define-headers($h1, $h2, $h3, $h4, $h5, $header-font-weight) {
+    h1 { font-size: $h1; }
+    h2 { font-size: $h2; }
+    h3 { font-size: $h3; }
+    h4 { font-size: $h4; }
+    h5 { font-size: $h5; }
+    h1, h2, h3, h4, h5 {font-weight:$header-font-weight}
+}
+
+/*
+Custom Text Styles
+
+This mixin defines and dynamically creates the class for custom text styles. 
+Define the variables in the "config" folder. 
+The mixin never needs to be changed or edited. 
+If a style is not needed, type "null" after the variable and the compiler will ignore the style.
+
+Class Output: .text--$text-type
+
+Example: .text--capitalize
+
+Variables Options
+
+$text-type: defines class name i.e capitalize
+
+$text-size: font-size i.e 16px
+
+$text-color: text color i.e  #4286f4
+
+$text-decoration: same as css text decoration attributes i.e underline
+
+$text-transform: same as css text-transform attributes i.e uppercase, capitalize
+
+$text-weight: font weight i.e bold
+
+$text-hover:
+
+markup:
+<p class="text--capitalize">capitalize headline</p>
+<p class="text--light">light headline</p>
+<a href="#" class="text--link">Link Text</a>
+<p class="text--content">Body Content Example. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+<p class="text--small">Small Text Example. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+Styleguide 4.3
+*/
+@mixin create-text-styles (
+$text-type, 
+$text-size, 
+$text-color, 
+$text-decoration, 
+$text-transform,
+$text-weight,
+$text-line-height,
+$text-hover) {
+    .text--#{$text-type} {
+        font-size: $text-size;
+        color: $text-color;
+        text-decoration: $text-decoration;
+        text-transform: $text-transform;
+        font-weight: $text-weight;
+        line-height: $text-line-height;
+        &:hover {
+            text-decoration: $text-hover;
+        }
+    }
+}
+

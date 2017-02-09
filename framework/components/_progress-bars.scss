@@ -1,0 +1,114 @@
+/*
+Progress Bars
+
+This mixin defines and dynamically creates the different progress bar classes. 
+Define the variables in the "config" folder. 
+The mixin never needs to be changed or edited. 
+If a style is not needed, type "null" after the variable and the compiler will ignore the style.
+
+Class Output: .progress-bar--$progress-bar-modifier
+
+Example: .progress-bar--primary
+
+Variables Options
+
+$progress-bar-modifier:
+
+$progress-bar-circle-color:
+
+$progress-bar-font-color:
+
+$progress-bar-color:
+     
+$progress-bar-hover:
+
+markup:
+<body ng-app="">
+    <div class="{{ChangeTheme}}">
+        <select ng-model="ChangeTheme" class="dropdown--primary">
+            <option value="bofi-bankofinternet--blue">Bank Of Internet</option>
+            <option value="bofi-bankx--green">BankX</option>
+            <option value="bofi-netbank--navy">Netbank</option>
+            <option value="bofi-ufb--brown">UfbDirect</option>
+        </select>
+    </div>
+    <div ng-class="ChangeTheme">
+        <div class="flex-column--center bofi-col-50--lg">
+				<div class="bofi-col-100--lg flex-row--center progress-bar--primary">
+					<div class="bofi-col-25--lg circle">
+						<a class="number">1</a>
+					</div>
+    				<div class="bofi-col-25--lg circle">
+						<a class="number">2</a>
+					</div>
+		</div>
+    </div>
+</body>
+
+Styleguide 3.3
+*/
+@mixin create-progress-bar ( 
+$progress-bar-modifier, 
+$progress-bar-circle-color, 
+$progress-bar-font-color, 
+$progress-bar-color, 
+$progress-bar-hover ) {
+    .progress-bar--#{$progress-bar-modifier} {
+
+        .circle {
+            position: relative;
+            text-align: right;
+            a {
+                border-radius: 50px;
+                line-height: 12px;
+                width: 30px;
+                height: 30px;
+                display: inline-block;
+                padding: 10px;
+                background-color: $progress-bar-circle-color;
+                color: $progress-bar-font-color;
+                text-align: center;
+                text-decoration: none;
+                margin-left: 20px;
+                z-index: 1;
+                position: relative;
+
+                &:hover {
+                    background-color: $progress-bar-hover;
+                }
+
+                &:active {
+                    background-color: $progress-bar-hover;
+                }
+            }
+
+            &.active {
+                a {
+                    background-color: $progress-bar-hover;
+                }
+
+                &:before {
+                    border-color: $progress-bar-hover;
+                }
+            }
+
+            &:before {
+                content: "";
+                position: relative;
+                display: inline-block;
+                width: 100%;
+                left: -10px;
+                top: 15px;
+                border: 1px solid $progress-bar-color;
+                position: absolute;
+            }
+
+            &:first-child {
+                width: auto;
+                &:before {
+                    display: none;
+                }
+            }
+        }
+    }
+}

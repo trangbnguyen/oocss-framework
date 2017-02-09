@@ -1,0 +1,79 @@
+/*
+Dialog Boxes
+
+This mixin will create the class as well as the css parameters.
+Change the variable sin the skin sass file located in the "skins" folder.
+If the style is not needed, type "null" after the variable. The compiler will ignore the style.
+
+Class Output: .dialog-box--$dialog-box-modifier
+
+Example: .dialog-box--primary
+
+Variables Options
+
+$dialog-box-background-color: defines the color of the alert box
+
+$dialog-box-font-color: defines the color of the font
+
+$dialog-box-height: in pixels
+
+$dialog-box-width: in pixels
+
+
+markup:
+
+*/
+
+@mixin create-dialog-box (
+	$dialog-box-modifier,
+	$dialog-box-background-color,
+	$dialog-box-title-background-color,
+	$dialog-box-title-font-color) {
+
+	@if ($dialog-box-modifier != null) {
+		$dialog-box-modifier: "--" + $dialog-box-modifier;
+	}
+
+	.dialog-box-wrapper {
+		background: rgba(0, 0, 0, 0.6);
+		height: 100%;
+		left: 0;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 10000;
+	
+		& .dialog-box#{$dialog-box-modifier} {
+			background: mix($dialog-box-background-color, #fff, 10%);
+			height:300px;
+			left: 50%;
+			max-width: 456px;
+			overflow: auto;
+			position: absolute;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			width: 95%;
+
+			& .dialog-title {
+				@include gradient($dialog-box-title-background-color, lighten($dialog-box-title-background-color, 10%), horizontal);
+				color: $dialog-box-title-font-color;
+				height: 136px;
+				padding: 20px;
+
+				& .dialog-close, .dialog-close * {
+					color: #fff;
+					cursor: pointer;
+					font-size: 22px;
+					position: absolute;
+					right: 7px;
+					top: 8px;
+				}
+			}
+
+			& .dialog-box-content {
+				padding: 40px;
+				text-align: center;
+			}
+		}
+	}
+}

@@ -1,0 +1,54 @@
+﻿/*
+User Initials
+
+This mixin defines and dynamically creates the profile image class. 
+Define the variables in the "config" folder. 
+The mixin never needs to be changed or edited. 
+If a style is not needed, type "null" after the variable and the compiler will ignore the style.
+
+Class Output: .user-inititals
+
+Variables Options
+
+$user-initals-font-weight: same as css font weight attribute i.e bold
+
+$user-initals-font-size: font size i.e 12px
+
+$user-initals-background: background color i.e hex or color variable
+
+markup:
+<h1>Example</h1>
+<sg-insert>3.6.3</sg-insert>
+
+sg-wrapper:
+<div class="bofi-udb--blue" style="height: 250px;">
+    <style>
+    .fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+    .fa-caret-down:before {
+  content: "\f0d7";
+}
+    </style>
+   <sg-wrapper-content/>
+</div>
+
+Styleguide 2.13
+*/
+@mixin create-user-initials (
+$user-initals-font-weight, 
+$user-initals-font-size, 
+$user-initals-background) {
+    .user-inititals {
+        font-weight: $user-initals-font-weight;
+        font-size: $user-initals-font-size;
+        width: 100%;
+        height: 100%;
+        background-color: $user-initals-background;
+    }
+}

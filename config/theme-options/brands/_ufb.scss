@@ -1,0 +1,20 @@
+﻿@mixin ufb {
+    //
+    //logo
+    //
+    $logo-modifer: lg-top;
+    $logo-height: 60px;
+    $logo-width: 250px;
+    $logo-margin: 30px 50px 10px;
+    $logo: url("/build/img/logos/ufbdirect-logo.png");
+    @include create-logo( $logo, $logo-height, $logo-width, $logo-margin, $logo-modifer ); 
+    //
+    //logo sm
+    //
+    $logo-modifer-2: sm-top;
+    $logo-height-2: 40px;
+    $logo-width-2: 130px;
+    $logo-margin-2: 10px;
+    $logo-2: url("/build/img/logos/ufbdirect-logo.png");
+    @include create-logo( $logo-2, $logo-height-2, $logo-width-2, $logo-margin-2, $logo-modifer-2 );
+}

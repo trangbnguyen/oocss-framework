@@ -1,0 +1,34 @@
+
+@mixin create-hero-skin ( $hero-background, $hero-background-image, $hero-margin, $hero-height, $hero-font-size, $hero-font-color, $hero-padding, $hero-font-weight, $hero-subline-margin, $modifier: false, $modifier-class: null) {
+    @if $modifier == false {
+        .hero {
+            background-color: lighten($hero-background,5%);
+            background-image: $hero-background-image;
+            margin: $hero-margin;
+            height: $hero-height;
+            padding: $hero-padding;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+
+            h1 {
+                font-size: $hero-font-size;
+                font-weight: $hero-font-weight;
+                color: $hero-font-color;
+            }
+
+            p {
+                color: $hero-font-color;
+                margin: $hero-subline-margin;
+            }
+        }
+    }
+
+    @if $modifier == true {
+        .hero--#{modifier-class} {
+            @content;
+        }
+    }
+}

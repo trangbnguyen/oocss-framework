@@ -1,0 +1,55 @@
+/*
+Labels
+
+This mixin will create the class as well as the css parameters.
+Change the variable sin the skin sass file located in the "skins" folder.
+If the style is not needed, type "null" after the variable. The compiler will ignore the style.
+
+Class Output: .label--$label-modifier
+
+Example: .label--primary
+
+Variables Options
+
+$label-type: defines class name type i.e form
+
+$label-font-size: same as css attributes i.e 14px
+
+$label-font-color: font color i.e #4286f4
+
+$label-padding: same as css padding attributes i.e 4px
+
+$text-transform: same as css text transform attributes i.e capitalize, uppercase
+
+markup:
+<div class="bofi-netbank--navy">
+    <div class="global flex-column--center bofi-column-50--lg">
+<br>
+<p>Note: The wrapper classes are not needed. The wrapper classes are simply to show themes.</p>
+ <br>
+        <label class="label--primary">Primary</label>
+    </div>
+</div>
+
+sg-wrapper:
+<style>
+</style>
+<sg-wrapper-content/>
+
+Styleguide 2.7
+*/
+@mixin create-label(
+  $label-modifier,
+  $label-font-size,
+  $label-font-color,
+  $label-padding,
+  $text-transform
+  ) {
+    .label--#{$label-modifier} {
+      font-size:$label-font-size;
+      color: $label-font-color;
+      padding:$label-padding;
+      text-transform: $text-transform;
+      display: block;
+    }
+}

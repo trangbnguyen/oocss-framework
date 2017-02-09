@@ -1,0 +1,171 @@
+﻿/*
+Table Styles
+
+This mixin defines and dynamically creates the profile image class. 
+Define the variables in the "config" folder. 
+The mixin never needs to be changed or edited. 
+If a style is not needed, type "null" after the variable and the compiler will ignore the style.
+
+Class Output: .table--$table-modifier
+
+Example: .table--primary
+
+Variables Options
+
+$table-modifier:
+     
+$table-font-color:
+
+$table-head-font-size:
+
+$table-head-background:
+
+$table-head-text-align:
+
+$table-head-padding:
+
+$table-row-border-top:
+
+$table-row-border-bottom:
+
+$table-row-background:
+
+$table-row-font-size:
+
+$table-cell-background:
+
+$table-cell-font-size:
+
+$table-cell-padding:
+
+markup:
+markup:
+<div class="bofi-bankofinternet--blue">
+<div class="global">
+<br>
+<p>Note: The wrapper classes are not needed. The wrapper classes are simply to show themes.</p>
+ <br>
+<table class="table--primary">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Description</th>
+      <th>Account</th>
+      <th>Amount</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td</td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <tr>
+      <td>11/15/2016</td>
+      <td>SDG&E</td>
+      <td>Checking 1 *7891</td>
+      <td>$64.99</td>
+    </tr>
+    <tr>
+      <td>10/15/2016</td>
+      <td>SDG&E</td>
+      <td>Checking 1 *7891</td>
+      <td class="text--error"> - $78.23</td>
+    </tr>
+    <tr>
+      <td>9/15/2016</td>
+      <td>Paycheck</td>
+      <td>Checking 1 *7891</td>
+      <td class="text--success"> + $1,000.00</td>
+    </tr>
+  </tbody>
+</table>
+<div class="bofi-col-50--lg">
+<table class="table--primary">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Description</th>
+      <th>Account</th>
+      <th>Amount</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td></td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <tr>
+      <td>11/15/2016</td>
+      <td>SDG&E</td>
+      <td>Checking 1 *7891</td>
+      <td>$64.99</td>
+    </tr>
+    <tr>
+      <td>10/15/2016</td>
+      <td>SDG&E</td>
+      <td>Checking 1 *7891</td>
+      <td class="text--error"> - $78.23</td>
+    </tr>
+    <tr>
+      <td>9/15/2016</td>
+      <td>Paycheck</td>
+      <td>Checking 1 *7891</td>
+      <td class="text--success"> + $1,000.00</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+
+sg-wrapper:
+<div class="bofi-udb--blue" style="height: 250px;">
+   <sg-wrapper-content/>
+</div>
+
+Styleguide 3.4
+*/
+@mixin create-table (
+$table-modifier, 
+$table-font-color, 
+$table-head-font-size, 
+$table-head-background, 
+$table-head-text-align, 
+$table-head-padding, 
+$table-row-border-top, 
+$table-row-border-bottom, 
+$table-row-background, 
+$table-row-font-size, 
+$table-cell-background, 
+$table-cell-font-size, 
+$table-cell-padding) {
+  .table--#{$table-modifier} {
+    color: $table-font-color;
+    width: 100%;
+    thead {
+      font-size: $table-head-font-size;
+      background-color: $table-head-background;
+      th {
+        text-align: $table-head-text-align;
+        padding: $table-head-padding;
+      }
+    }
+    tbody {
+      tr,
+      .row {
+        border-top: $table-row-border-top;
+        border-bottom: $table-row-border-bottom;
+        background-color: $table-row-background;
+        font-size: $table-row-font-size;
+      }
+      td,
+      .cell {
+        background-color: $table-cell-background;
+        font-size: $table-cell-font-size;
+        padding: $table-cell-padding;
+      }
+    }
+  }
+}

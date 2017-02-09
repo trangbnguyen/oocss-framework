@@ -1,0 +1,114 @@
+﻿/*
+Dropdowns
+
+This mixin will create the class as well as the css parameters.
+Change the variable sin the skin sass file located in the "skins" folder.
+If the style is not needed, type "null" after the variable. The compiler will ignore the style.
+    
+markup:
+<div class="bofi-netbank--navy">
+    <br>
+<p>Note: The wrapper classes are not needed. The wrapper classes are simply to show themes.</p>
+    <br>
+    <div class="global flex-column--center">
+        <select class="dropdown--primary">
+              <option value="Option1">Option 1</option>
+              <option value="Option2">Option 2</option>
+              <option value="Option3">Option 3</option>
+              <option value="Option4">Option 4</option>
+        </select>
+    </div>
+</div>
+
+Styleguide 2.4
+*/
+@mixin create-dropdown(
+	$dropdown--modifier,
+	$dropdown-background-color,
+	$dropdown-border-color,
+	$dropdown-border-radius,
+	$dropdown-options-hover-background-color,
+	$dropdown-options-hover-font-color,
+	$dropdown-options-height
+	
+) {
+    @if ($dropdown--modifier != null) {
+		$dropdown--modifier: "--" + $dropdown--modifier;
+	}
+
+	.dropdown-wrapper {
+		&.expanded {
+			&::after {
+				content: "";
+				height: 100%;
+				left: 0;
+				position: fixed;
+				top: 0;
+				width: 100%;
+				z-index: 10000;
+			}
+
+			& input {
+				border-color: #DEDFE1;
+				border-bottom-color: transparent !important;
+				border-bottom-left-radius: 0;
+				border-bottom-right-radius: 0;
+			}
+			
+			& .dropdown#{$dropdown--modifier} {
+				& .dropdown-options {
+					display: block;
+				}
+			}
+		}
+		
+		& .dropdown#{$dropdown--modifier} {
+			border-radius: $dropdown-border-radius;
+			cursor: default;
+			outline: none;
+			position: relative;
+			user-select: none;
+			z-index: 100001;
+		
+				& select {
+					display: none;
+				}
+
+				& input {
+					user-select: none;
+				}
+
+				& .expand {
+					left: 100% !important;
+					margin-left: -30px;
+					position: absolute;
+					top: 13px;
+				}
+
+				& .dropdown-options {
+					background: $dropdown-background-color;
+					border: 1px solid $dropdown-border-color;
+					border-top-width: 0 !important;
+					border-bottom-left-radius: $dropdown-border-radius;
+					border-bottom-right-radius: $dropdown-border-radius;
+					display: none;
+					list-style: none;
+					position: absolute;
+					width: 100%;
+					z-index: 100;
+
+					& li {
+						height: $dropdown-options-height;
+						line-height: $dropdown-options-height;
+						padding: 0 16px;
+					
+						&:hover,
+						&.selected {
+							background: $dropdown-options-hover-background-color;
+							color: $dropdown-options-hover-font-color;
+						}
+					}
+				}
+		}
+	}
+}

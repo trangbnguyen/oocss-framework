@@ -1,0 +1,45 @@
+/*
+Logo
+
+This mixin defines and dynamically creates the logo classes. 
+Define the variables in the "config" folder. 
+The mixin never needs to be changed or edited. 
+If a style is not needed, type "null" after the variable and the compiler will ignore the style.
+
+Class Output: .logo--$logo-modifer
+
+Example: .logo--stacked
+
+Variables Options
+
+$logo-modifer: defines the logo class i.e stacked
+
+$logo: logo image same as css background-image attributes i.e url("paper.gif");
+
+$logo-height: height i.e 150px
+
+$logo-width: width i.e 150px
+
+$logo-margin: same as css margin attributes
+
+Styleguide 2.9
+*/
+@mixin create-logo (
+$logo, 
+$logo-height,
+$logo-width, 
+$logo-margin, 
+$logo-modifer) {
+  .logo--#{$logo-modifer} {
+            display: inline-block;
+            height: $logo-height;
+            width: $logo-width;
+            margin: $logo-margin;
+            background-image: $logo;
+            background-size: 100% auto;
+            background-repeat: no-repeat;
+            @if $logo-modifer == "lg-top" {
+                position: absolute;
+            }
+            }
+}

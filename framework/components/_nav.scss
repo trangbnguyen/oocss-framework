@@ -1,0 +1,109 @@
+/*
+Navigation
+
+This mixin defines and dynamically creates the different navigation classes. 
+Define the variables in the "config" folder. 
+The mixin never needs to be changed or edited. 
+If a style is not needed, type "null" after the variable and the compiler will ignore the style.
+
+Class Output: .nav--$nav-modifer
+
+Example: .nav-primary
+
+Variables Options
+
+$nav-type:
+     
+$nav-background:
+
+$nav-padding:
+     
+$nav-link-color:
+     
+$nav-link-hover:
+     
+$nav-height:
+     
+$nav-margin:
+
+$nav-font-size:
+     
+$nav-text-underline:
+
+$nav-hover-font-weight:
+
+$nav-hover-border:
+     
+$nav-container:
+
+Styleguide 3.2
+*/
+@mixin create-nav ( 
+$nav-modifer, 
+$nav-background, 
+$nav-padding, 
+$nav-link-color, 
+$nav-link-hover, 
+$nav-height, 
+$nav-margin, 
+$nav-font-size, 
+$nav-text-underline, 
+$nav-hover-font-weight, 
+$nav-hover-border,
+$hover-icon-size, 
+$hover-icon-color,
+$hover-icon-position,
+$hover-icon-bottom-position,
+$hover-icon-left-position,
+$nav-container ) {
+    .nav--#{$nav-modifer} {
+        background: $nav-background;
+        margin: $nav-margin;
+
+        ul {
+            list-style: none;
+            padding: $nav-padding;
+            position: relative;
+            max-width: $nav-container;
+            margin: 0 auto;
+        }
+
+        li {
+            height: $nav-height;
+        }
+
+        a {
+            color: $nav-link-color;
+            font-size: $nav-font-size;
+            text-decoration: $nav-text-underline;
+            height: 100%;
+            width: 100%;
+
+            &:hover {
+                color: $nav-link-hover;
+                border-bottom: $nav-hover-border;
+                font-weight: $nav-hover-font-weight;
+                position: relative;
+                &::after {
+                    content: "";
+                    @include create-triangle($hover-icon-size, $hover-icon-color);
+                    position: $hover-icon-position;
+                    bottom: $hover-icon-bottom-position;
+                    left: $hover-icon-left-position;
+                }
+            }
+        }
+        //Hides Secondary Nav
+        .nav-secondary {
+            display: none;
+        }
+        //Action to Show Secondary Nav
+        li:hover .nav-secondary {
+            position: absolute;
+            left: 0;
+            z-index: 1;
+            display: initial;
+            display: flex;
+        }
+    }
+}

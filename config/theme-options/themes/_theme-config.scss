@@ -1,0 +1,86 @@
+//
+//Theme Variables
+//
+$brown-skin: "brown";
+$blue-skin: "blue";
+$green-skin: "green";
+$navy-skin: "navy";
+
+$bankofinternet-brand: "bankofinternet";
+$bankx-brand: "bankx";
+$netbank-brand: "netbank";
+$ufb-brand: "ufb";
+$udb-brand: "udb";
+$uikit-brand: "uikit";
+
+//
+//Skins
+//
+@import "../skins/blue";
+@import "../skins/brown";
+@import "../skins/green";
+@import "../skins/navy";
+//
+//Brand
+//
+@import "../brands/bankofinternet";
+@import "../brands/bankx";
+@import "../brands/netbank";
+@import "../brands/ufb";
+@import "../brands/uikit";
+
+@mixin define-skin ($define-skin) {
+    @if $define-skin == "blue" {
+        @include blue;
+    }
+
+    @if $define-skin == "brown" {
+        @include brown;
+    }
+
+    @if $define-skin == "green" {
+        @include green;
+    }
+
+    @if $define-skin == "navy" {
+        @include navy;
+    }
+
+}
+
+@mixin define-brand ($define-brand) {
+    @if $define-brand == "bankofinternet" {
+        @include bankofinternet;
+    }
+
+    @if $define-brand == "bankx" {
+        @include bankx;
+    }
+
+    @if $define-brand == "netbank" {
+        @include netbank;
+    }
+
+    @if $define-brand == "ufb" {
+        @include ufb;
+    }
+
+    @if $define-brand == "uikit" {
+        @include uikit;
+    }
+
+}
+
+//This is if you want to create a wrapper class for a theme
+@mixin create-theme-wrapper ($define-skin, $define-brand) {
+    .bofi-#{$define-brand}--#{$define-skin} {
+        @include define-skin($define-skin);
+        @include define-brand($define-brand);
+    }
+}
+
+//This is if you want to create a theme and will compile seprate stylesheets for each theme
+@mixin create-theme ($define-skin, $define-brand) {
+    @include define-skin($define-skin);
+    @include define-brand($define-brand);
+}

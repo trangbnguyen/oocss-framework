@@ -1,0 +1,9 @@
+﻿//
+//Dependencies
+//
+@import "./framework/framework";
+//
+//Theme
+//
+@import "./config/theme-options/themes/theme-config";
+@include create-theme ($green-skin, $bankx-brand);

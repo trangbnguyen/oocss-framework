@@ -1,0 +1,71 @@
+/*
+Radio Buttons
+
+This mixin defines and dynamically creates the radiobutton classes. 
+Define the variables in the "config" folder. 
+The mixin never needs to be changed or edited. 
+If a style is not needed, type "null" after the variable and the compiler will ignore the style.
+
+Class Output: .radio-button--$radio-button-modifier
+
+Example: .radio-button--primary
+
+Variables Options
+
+$radio-button-off-color: defines the color when the radio button is not selected
+
+$radio-button-on-color: defines the color when the radio button is selected
+
+$radio-button-height: in pixels
+
+
+markup:
+
+Styleguide 2.11
+*/
+
+@mixin create-radio-button (
+	$radio-button-modifier,
+	$radio-button-off-color,
+	$radio-button-on-color,
+	$radio-button-border-color,
+	$radio-button-height) {
+
+	@if ($radio-button-modifier != null) {
+		$radio-button-modifier: "--" + $radio-button-modifier;
+	}
+
+	input[type=radio].radio-button#{$radio-button-modifier} {
+		display: none;
+	}
+	input[type=radio].radio-button#{$radio-button-modifier} + label {
+		height: $radio-button-height;
+		padding-left: $radio-button-height + 5;
+		position: relative;
+		top: 13px;
+	}
+	input[type=radio].radio-button + label::before {
+		background: $radio-button-off-color;
+		border: 1px solid $radio-button-border-color;
+		border-radius: $radio-button-height / 2;
+		content: " ";
+		display: inline-block;
+		height: $radio-button-height;
+		left: 0;
+		position: absolute;
+		width: $radio-button-height;
+	}
+	input[type=radio]:checked.radio-button + label::after {
+		left: $radio-button-height - $radio-button-height + 2;
+		background: $radio-button-on-color;
+		border-radius: 50%;
+		content: "";
+		display: inline-block;
+		height: $radio-button-height - 8;
+		left: 4px;
+		position: absolute;
+		top: 4px;
+		transition: left 0.3s;
+		width: $radio-button-height - 8;
+	}
+}

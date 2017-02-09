@@ -1,0 +1,60 @@
+﻿/*
+List Styles
+
+This mixin will create the class as well as the css parameters.
+Change the variable sin the skin sass file located in the "skins" folder.
+If the style is not needed, type "null" after the variable. The compiler will ignore the style.
+
+Class Output: .list--$list-modifier
+
+Example: .list--bullets
+
+Variables Options
+
+$list-modifier:
+
+$list-style-type:
+
+$list-font-color:
+
+$list-font-size:
+
+$list-line-height:
+
+markup:
+<div class="bofi-bankofinternet--blue">
+    <div class="global flex-column--center">
+    <div class="list--bullets">
+    <ul>
+        <li>List Item</li>
+        <li>List Item</li>
+        <li>List Item</li>
+    </ul>
+</div>
+<div class="list--numbered">
+    <ul>
+        <li>List Item</li>
+        <li>List Item</li>
+        <li>List Item</li>
+    </ul>
+    </div>
+</div>
+</div>
+
+Styleguide 2.8
+*/
+@mixin create-list-style (
+$list-modifier,
+$list-style-type,
+$list-font-color,
+$list-font-size,
+$list-line-height) {
+    .list--#{$list-modifier} {
+        ul {
+            list-style-type: $list-style-type;
+            color: $list-font-color;
+            font-size:$list-font-size;
+            line-height:$list-line-height;
+        }
+    }
+}

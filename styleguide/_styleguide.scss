@@ -1,0 +1,42 @@
+﻿/*
+    1. Figure out how to copy index override after compile
+    2. Update mixins automatically through extend or otherwise
+
+*/
+@mixin styleguide ($primary-color) {
+    #ChangeTheme {
+            position: fixed;
+    }
+    header.sg-header {
+        background-color: #364754;
+    }
+    background-color: transparent;
+    nav.sg-top-nav, nav.sg-top-nav-menu {
+        li {
+            background-color: transparent;
+        }
+        background-color: lighten($primary-color,10%);
+    }
+
+    .sg-section-header h1 {
+        background-color: $primary-color;
+    }
+
+    .sg-search-container.side-nav-search {
+        width: 20%;
+        margin: 10px;
+        float: right;
+        input {
+            background-color: #fff;
+            border: 1px solid #DEDFE1;
+            color: #364754;
+            padding: 16px;
+            border-radius: 4px;
+            font-size: 16px;
+            outline: none;
+            width: 100%;
+            box-sizing: border-box;
+            letter-spacing: 2px;
+        }
+    }
+}

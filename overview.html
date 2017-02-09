@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:200" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="/bofi-master.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+</head>
+<body ng-app="">
+    <div class="{{ChangeTheme}}">
+        <h2>Change Themes</h2>
+        <select ng-model="ChangeTheme" class="dropdown--primary">
+            <option value="bofi-bankofinternet--blue">Bank Of Internet</option>
+            <option value="bofi-bankx--green">BankX</option>
+            <option value="bofi-netbank--navy">Netbank</option>
+            <option value="bofi-ufb--brown">UfbDirect</option>
+        </select>
+    </div>
+    <div ng-class="ChangeTheme">
+        <div class="flex-column--center bofi-col-33--lg">
+            <h3><a href="/section/2.2">Buttons</a></h3>
+            <button class="btn--primary-lg">Primary Large</button>
+            <br>
+            <button class="btn--primary-sm">Primary Small</button>
+            <br>
+            <button class="btn--secondary-lg">Secondary Large</button>
+            <br>
+            <button class="btn--secondary-sm">Secondary Small</button>
+            <br>
+            <button class="btn--alternative-lg">Alternative Large</button>
+            <br>
+            <button class="btn--alternative-sm">Alternative Small</button>
+            <h3>Inputs</h3>
+            <div class="input--primary">
+                <input type="text" placeholder="primary input">
+            </div>
+            <div class="input--secondary">
+                <input type="text" placeholder="secondary input">
+            </div>
+        </div>
+        <div class="flex-column--space-around  bofi-col-33--lg">
+            <h3>Custom Fonts</h3>
+            <p class="text--capitalize">capitalize headline</p>
+            <p class="text--light">light headline</p>
+            <a href="#" class="text--link">Link Text</a>
+            <p class="text--content">Body Content Example. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <p class="text--small">Small Text Example. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <h3>Lists</h3>
+            <div class="list--bullets">
+                <ul>
+                    <li>List Item</li>
+                    <li>List Item</li>
+                    <li>List Item</li>
+                </ul>
+            </div>
+            <div class="list--numbered">
+                <ul>
+                    <li>List Item</li>
+                    <li>List Item</li>
+                    <li>List Item</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+

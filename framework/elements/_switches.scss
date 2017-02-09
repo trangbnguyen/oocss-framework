@@ -1,0 +1,91 @@
+/*
+Switches
+
+This mixin defines and dynamically creates the switch classes. 
+Define the variables in the "config" folder. 
+The mixin never needs to be changed or edited. 
+If a style is not needed, type "null" after the variable and the compiler will ignore the style.
+
+Class Output: .switch--$switch-modifier
+
+Example: .switch--primary
+
+Variables Options
+
+$switch-off-color: defines the color when the switch is off
+
+$switch-on-color: defines the color when the switch is on
+
+$switch-height: in pixels
+
+$switch-width: in pixels
+
+
+markup:
+    <body ng-app="">
+    <div class="{{ChangeTheme}}">
+    <select ng-model="ChangeTheme" class="dropdown--primary"> 
+        <option value="bofi-bankofinternet--blue">Bank Of Internet</option>
+        <option value="bofi-bankx--green">BankX</option>
+        <option value="bofi-netbank--navy">Netbank</option>
+        <option value="bofi-ufb--brown">UfbDirect</option>
+    </select>
+    </div>
+    <div ng-class="ChangeTheme">
+        <div class="flex-column--center">
+            <input type="checkbox" class="switch" id="test" />
+            <label for="test">Testing the switch</label>
+        </div>
+    </div>
+</body>
+
+Styleguide 2.12
+*/
+
+@mixin create-switch (
+	$switch-modifier,
+	$switch-off-color,
+	$switch-on-color,
+	$switch-height,
+	$switch-width) {
+
+	@if ($switch-modifier != null) {
+		$switch-modifier: "--" + $switch-modifier;
+	}
+
+
+	input[type=checkbox].switch#{$switch-modifier} {
+		display: none;
+	}
+	input[type=checkbox].switch#{$switch-modifier} + label {
+		position: relative;
+		top: 13px;
+	}
+	input[type=checkbox].switch + label::before {
+		background: $switch-off-color;
+		border-radius: $switch-height / 2;
+		content: " ";
+		display: inline-block;
+		height: $switch-height;
+		width: $switch-width;
+	}
+	input[type=checkbox].switch + label::after {
+		background: #fff;
+		border-radius: 50%;
+		box-shadow: 0 0 7px #9B9B9B;
+		content: "";
+		display: inline-block;
+		height: $switch-height - 4;
+		left: 2px;
+		position: absolute;
+		top: 2px;
+		transition: left 0.3s;
+		width: $switch-height - 4;
+	}
+	input[type=checkbox]:checked.switch + label::before {
+		@include gradient($switch-on-color, darken($switch-on-color, 10), vertical);
+	}
+	input[type=checkbox]:checked.switch + label::after {
+		left: $switch-width - $switch-height + 2;
+	}
+}
